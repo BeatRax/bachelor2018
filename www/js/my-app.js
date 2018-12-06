@@ -20,10 +20,9 @@ $$(document).on('deviceready', function() {
 // Now we need to run the code that will be executed only for About page.
 
 // Option 1. Using page callback for page (for "about" page in this case) (recommended way):
-myApp.onPageInit('about', function (page) {
-    // Do something here for "about" page
-
-})
+myApp.onPageInit('login-screen', function (page) {
+    
+  });  
 
 // Option 2. Using one 'pageInit' event handler for all pages:
 $$(document).on('pageInit', function (e) {
@@ -41,3 +40,12 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     // Following code will be executed for page with data-page attribute equal to "about"
     myApp.alert('Here comes About page');
 })
+
+$$('.login-screen .list-button').on('click', function () {
+    var uname = $$('.login-screen input[name = "username"]').val();
+    var pwd = $$('.login-screen input[name = "password"]').val();
+    
+    myApp.alert('Username: ' + uname + ', Password: ' + pwd, function () {
+       myApp.closeModal('.login-screen');
+    });
+ });
