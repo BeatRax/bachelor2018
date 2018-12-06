@@ -1,5 +1,7 @@
 // Initialize app
-var myApp = new Framework7();
+var myApp = new Framework7({
+   
+});
 
 
 // If we need to use custom DOM library, let's save it to $$ variable:
@@ -40,6 +42,7 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     // Following code will be executed for page with data-page attribute equal to "about"
     myApp.alert('Here comes About page');
 })
+
 
 $$('.login-screen .list-button').on('click', function () {
     var uname = $$('.login-screen input[name = "username"]').val();
