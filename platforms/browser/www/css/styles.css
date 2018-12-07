@@ -14,10 +14,27 @@
     background: #000000;
 }
 
+/*navbar */
+.navbar-fixed .page-content, .navbar-through .page-content {
+    padding-top: 44px;
+    padding-bottom: 44px;
+}
 .navbar{
     background-color: #C6FFDD;
 }
 
+/* toolbar */
+.toolbar{
+    background-color: #f7797d;
+}
+
+.toolbar .toolbar-inner a img{
+    height: 30px;
+    width: 30px;
+}
+
+
+/*Index.html*/
 .searchbar-top{
     margin: 0;
     padding: 0;
@@ -59,7 +76,22 @@
     background-image: linear-gradient(#C6FFDD,#FBD786, #f7797d); /* Standard syntax (must be last) */
 }
 
-.navbar-fixed .page-content, .navbar-through .page-content {
-    padding-top: 44px;
-    padding-bottom: 44px;
+/*about.html*/
+.addItemRow{
+    margin-top: 20px;
 }
+
+.profile h4{
+    text-align: center;
+}
+.profilbillede{
+    height: auto;
+    width: 100%;
+}
+
+.addItem img{
+    border: 1px solid white;
+    height: auto;
+    width: 100%;
+}
+

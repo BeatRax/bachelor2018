@@ -1,6 +1,11 @@
 // Initialize app
 var myApp = new Framework7({
-   
+    routes: [
+        {
+          path: '/about/',
+          url: 'about.html',
+        },
+      ]
 });
 
 
