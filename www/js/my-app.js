@@ -5,6 +5,10 @@ var myApp = new Framework7({
           path: '/about/',
           url: 'about.html',
         },
+        {
+        path: '/sale/',
+        url: 'sale.html',
+        }
       ]
 });
 
