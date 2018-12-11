@@ -82,7 +82,7 @@
 }
 
 .profile h4{
-    text-align: center;
+    text-align: center
 }
 .profilbillede{
     height: auto;
@@ -95,3 +95,17 @@
     width: 100%;
 }
 
+
+/*Sale html*/
+
+.list input{
+    width: 100%;
+}
+.list textarea {
+    width: 100%;
+}
+
+.item-input-wrap input{
+    padding: 10px 0px 10px 0px;
+    margin-top: 10px;
+}

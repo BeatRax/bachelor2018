@@ -52,7 +52,7 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     myApp.alert('Here comes About page');
 })
 
-
+//login screen po up
 $$('.login-screen .list-button').on('click', function () {
     var uname = $$('.login-screen input[name = "username"]').val();
     var pwd = $$('.login-screen input[name = "password"]').val();
@@ -61,3 +61,5 @@ $$('.login-screen .list-button').on('click', function () {
        myApp.closeModal('.login-screen');
     });
  });
+
+ //

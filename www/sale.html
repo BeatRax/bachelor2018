@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
@@ -29,72 +30,90 @@
 
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-   
+
 </head>
 
 <body>
-    <div class = "views">
-        <div class = "view view-main">
-        
-           <div class = "navbar">
-              <div class = "navbar-inner">
-                 <div class = "center sliding">
-                     <p>Opret Annonce</p>
-                 </div>
-              </div>
-           </div>
-           
-           <div class = "pages">
-              <div data-page = "index" class = "page navbar-fixed">
-                 <div class = "page-content ItemShowcase">
-                    <div class = "content-block">        
-                        <div class="row">                    
-                           
+    <div class="views">
+        <div class="view view-main">
+
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center sliding">
+                        <p>Opret Annonce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pages">
+                <div data-page="index" class="page navbar-fixed">
+                    <div class="page-content ItemShowcase">
+                        <div class="content-block">
+                            <div class="row add-image">
+
                                 <div class="col-20"></div>
-                                <div class="col-60 profile">
-                                    <h4>tilføj billede</h4>
-                                    <img src="img/additem.jpg" alt="profilbillede" class="profilbillede" style="height: 240px;">
-                                 </div>
+                                <div class="col-60 profile">                                    
+                                    <img src="img/additem.jpg" alt="profilbillede" class="profilbillede" style="height: 240px;">                
+                                </div>
                                 <div class="col-20"></div>
-                            
-                        </div>
-                        
-                        <div class="row ">
-                           
+                            </div>
+                            <div class="row">
+                                <div class="col-20"></div>
+                                <div class="col-60">
+                                    <form class="list" id="itemFillForm">
+                                        <div class="item-content item-input">
+                                            <div class="item-inner">                                             
+                                                <div class="item-input-wrap">
+                                                    <input type="text" name="name" placeholder="Dit navn">
+                                                </div>                                               
+
+                                            </div>
+                                        </div>
+
+                                        <div class="item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-input-wrap">
+                                                    <input type="text" name="name" placeholder="Din pris">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-input-wrap">
+                                                    <input type="text" name="name" placeholder="Din beskrivelse">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="submit" class="button-fill button-round" value="Button">
+                                    </form>
+
+                                </div>
+                                <div class="col-20"></div>
+                            </div>
+
+                            <div class="row ">
+
+                            </div>
                         </div>
                     </div>
-                 </div>
-                 
-                 <div class="navbar navbar-bottom">
-                        ...
-                      </div>
-                      <!-- Fixed Toolbar -->
-                      <div class="toolbar">
-                        <div class="toolbar-inner">
-                          
-                                <a class="link external" href="index.html"><img src="img/home.png"></a>
-                                <a class="link external" href="#"><img src="img/sale.png"></a>
-                                <a class="link external" href="sale.html"><img src="img/sell.png"></a>
-                                <a class="link external" href="about.html""><img src="img/profile.png"></a>
-                        </div>
-                      </div>
-                     
-              </div>
-           </div>
-           
-        </div>
-     </div>
-     
-     
-     
 
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
-    <script type="text/javascript" src="js/my-app.js"></script>
+                    <div class="navbar navbar-bottom">
+                        ...
+                    </div>
+                    <!-- Fixed Toolbar -->
+                    <div class="toolbar">
+                        <div class="toolbar-inner">
+
+                            <a class="link external" href="index.html"><img src="img/home.png"></a>
+                            <a class="link external" href="#"><img src="img/sale.png"></a>
+                            <a class="link external" href="sale.html"><img src="img/sell.png"></a>
+                            <a class="link external" href="about.html""><img src=" img/profile.png"> </a> </div> </div>
+                                </div> </div> </div> </div> <script type="text/javascript" src="cordova.js"></script>
+                                <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+                                <script type="text/javascript" src="js/my-app.js"></script>
 </body>
 
 </html>
-
-
-
