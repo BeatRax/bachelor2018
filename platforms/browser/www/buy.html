@@ -30,8 +30,7 @@
 
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
@@ -42,7 +41,7 @@
             <div class="navbar">
                 <div class="navbar-inner">
                     <div class="center sliding">
-                        <p>Opret Annonce</p>
+                        <p>Aktive varer</p>                      
                     </div>
                 </div>
             </div>
@@ -51,57 +50,42 @@
                 <div data-page="index" class="page navbar-fixed">
                     <div class="page-content ItemShowcase">
                         <div class="content-block">
-                            <div class="row add-image">
-
-                                <div class="col-20"></div>
-                                <div class="col-60 profile">                                    
-                                    <img src="img/camera.png" alt="profilbillede" class="profilbillede" style="height: 240px;">                
-                                </div>
-                                <div class="col-20"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-20"></div>
-                                <div class="col-60">
-                                    <form class="list" id="itemFillForm">
-                                        <div class="item-content item-input">
-                                            <div class="item-inner">                                             
-                                                <div class="item-input-wrap">
-                                                    <input type="text" name="name" placeholder="Dit navn">
-                                                </div>                                               
-
-                                            </div>
-                                        </div>
-
-                                        <div class="item-content item-input">
-                                            <div class="item-inner">
-                                                <div class="item-input-wrap">
-                                                    <input type="text" name="name" placeholder="Din pris">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item-content item-input">
-                                            <div class="item-inner">
-                                                <div class="item-input-wrap">
-                                                    <input type="text" name="name" placeholder="Din beskrivelse">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <div class="wrappper" style="  display: flex;
-                                    align-items: center;
-                                    justify-content: center;""">
-                                        <button class="col button button-fill">Opret</button>
-                                    </div>
-                                    </form>
-
-                                </div>
-                                <div class="col-20"></div>
-                            </div>
-
-                            <div class="row ">
-
-                            </div>
+                            <h1 style="text-align: center;">Din aktive købsoversigt</h1>
+                            <h3 style="text-align: center;">Husk ved afluttet køb scan QR kode hos sælger</h3>
                         </div>
+                        <div class="row itemRow">
+                            <div class="col-50 showcaseitem">
+                                <div class="col-100 imagePlaceholder">
+                                 <img src="img/41KoFt-h+rL.jpg"/>
+                                </div>
+                                <div class="col-100 itemText">
+                                    <div class="textWrapper">
+                                    
+                                    <h5>Thomas Andersen</h5>
+                                    <h5>Brugt meget lidt</h5>
+                                    <h5>Pris : 150kr</h5>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-50 showcaseitem">
+                                    <div class="col-100 imagePlaceholder">
+                                <img src="img/s-l960.jpg">
+                                    </div>
+                                <div class="col-100 itemText">
+                                    <h5>Thomas Andersen</h5>
+                                    <h5>Brugt meget lidt</h5>
+                                    <h5>Pris : 150kr</h5>
+                                </div>
+                            </div>                            
+                         </div>
+
+                         <div class="row">
+                             <div class="col-20"></div>
+                             <div class="col-60">
+                                 <img src="img/qr.png" class="qr">
+                            </div>
+                            <div class="col-20"></div>
+                         </div>
                     </div>
                     <div class="navbar navbar-bottom">
               
@@ -123,7 +107,7 @@
    </div>
    
 
-
+   
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
   <script type="text/javascript" src="js/my-app.js"></script>

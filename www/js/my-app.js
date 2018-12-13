@@ -8,8 +8,17 @@ var myApp = new Framework7({
         {
         path: '/sale/',
         url: 'sale.html',
-        }
-      ]
+        },
+        {
+        path: '/buy/',
+        url: 'buy.html',
+         },
+         {
+        path: '/forside/',
+         url: 'forside.html',
+         }
+    ]
+    
 });
 
 
@@ -22,11 +31,11 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
+  
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
 });
-
 
 // Now we need to run the code that will be executed only for About page.
 
@@ -63,3 +72,30 @@ $$('.login-screen .list-button').on('click', function () {
  });
 
  //
+
+
+
+// Dom Events
+$$('.panel-left').on('panel:open', function () {
+  console.log('Panel left: open');
+});
+$$('.panel-left').on('panel:opened', function () {
+  console.log('Panel left: opened');
+});
+
+// Instance Events
+var panelRight = myApp.panel.right;
+panelRight.on('open', function () {
+  console.log('Panel right: open');
+});
+panelRight.on('opened', function () {
+  console.log('Panel right: opened');
+});
+
+// App Events
+myApp.on('panelClose', function (panel) {
+  console.log('Panel ' + panel.side + ': close');
+});
+myApp.on('panelClosed', function (panel) {
+  console.log('Panel ' + panel.side + ': closed');
+});
