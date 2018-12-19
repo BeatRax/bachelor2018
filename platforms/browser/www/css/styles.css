@@ -40,6 +40,19 @@ width: 100%;
 height: auto;
 }
 
+.forside {
+    background-image: linear-gradient(#C6FFDD,#FBD786, #f7797d); /* Standard syntax (must be last) */
+}
+
+.iconWrapper{
+    margin-top:10%;
+}
+.iconWrapper h1{
+    text-align: center;
+}
+.icons{
+    padding-bottom: 20px;
+}
 /*Index.html*/
 .searchbar-top{
     margin: 0;
@@ -49,16 +62,29 @@ height: auto;
     margin-bottom: 10px 
 }
 
-.choose-cat button{
-    text-align: center;
-}
-.choose-cat{
-    border: 1px solid black;
-}
+
+
 .showcaseitem{
     height: 300px;
     width: auto;
     
+}
+
+.btnWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnWrapper p{
+text-align: center;
+text-justify: auto;
+}
+
+
+.btnWrapper .button{
+    height: 40px;
+    width: 100px;
 }
 .imagePlaceholder{
     height:225px;
