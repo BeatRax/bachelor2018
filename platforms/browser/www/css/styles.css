@@ -35,16 +35,9 @@
 
 
 /*forside.html*/
-.foside-block{
-        margin: 0px 0px;
-        padding: 0px 0px;
-        color: #6d6d72;
-        box-sizing: border-box;
-
-    }
-.splitscreen img{
-    height: auto;
-    width: 100%;
+.forsideimg{
+width: 100%;
+height: auto;
 }
 
 /*Index.html*/
