@@ -14,7 +14,7 @@ $(document).ready(function () {
 
         if (user) {
             // $('.views').append("<p>Du er logget ind som:" + user.email + " </p>")
-            myApp.closeModal('.login-screen');
+            // myApp.closeModal('.login-screen');
             $('html').fadeTo( "fast", 1 );
 
         } else {
@@ -26,7 +26,7 @@ $(document).ready(function () {
         }
     })
     $('.close-popup.back').click(function() {
-        myApp.closeModal('.login-screen');
+        // myApp.closeModal('.login-screen');
     })
     
     $('p.sign-up').click(function () {
@@ -38,7 +38,7 @@ $(document).ready(function () {
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(function (user) {
             console.log(user.email);
-            myApp.closeModal('.login-screen');
+            // myApp.closeModal('.login-screen');
             // location.reload();
         })
             .catch(function (err) {
@@ -74,7 +74,7 @@ $(document).ready(function () {
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(function (user) {
                 console.log(user.email);
-                myApp.closeModal('.login-screen');
+                // myApp.closeModal('.login-screen');
                 // window.location("/index.html");
             })
             .catch(function (err) {
