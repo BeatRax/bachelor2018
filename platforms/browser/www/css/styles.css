@@ -1,9 +1,12 @@
 /*
    statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
    statusbar plugin is added, it also adds default setting to make the content white via:
+
        <preference name="StatusBarStyle" value="lightcontent"/>
+
    Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
    in the config.xml file and will be added by the CLI when you build locally.
+
    See https://github.com/apache/cordova-plugin-statusbar
 */
 
@@ -29,7 +32,14 @@ html {
 }
 
 .navbar{
-    background-color: #C6FFDD;
+    background-color: white;
+}
+
+.sliding{
+    position: static;
+}
+.navbar img{
+    margin-bottom: 10px;
 }
 
 /* toolbar */
@@ -139,7 +149,7 @@ text-justify: auto;
     height: 100%;
 }
 .itemText{
-    background-color: rgba(255, 255, 255, 0.678);
+    background-color: white;
     margin-top: -10px;
     margin-top: -10px;
     padding: 0;
@@ -155,7 +165,7 @@ text-justify: auto;
 }
 
 .ItemShowcase{
-    /* background-image: linear-gradient(#C6FFDD,#FBD786, #f7797d); Standard syntax (must be last) */
+    background-image: linear-gradient(#C6FFDD,#FBD786, #f7797d); 
 }
 
 /*about.html*/
@@ -193,8 +203,8 @@ text-justify: auto;
 }
 
 .button.button-fill {
-    color: #fff;
-    background: green;
+    color: black;
+    background: #fff;
     border: none;
 margin-top: 10px;
 }
