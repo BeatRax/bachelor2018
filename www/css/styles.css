@@ -25,6 +25,9 @@
     background-color: white;
 }
 
+.sliding{
+    position: static;
+}
 .navbar img{
     margin-bottom: 10px;
 }
