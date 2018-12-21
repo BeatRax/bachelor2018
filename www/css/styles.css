@@ -16,6 +16,10 @@
     background: #000000;
 }
 
+
+.tester {
+    margin: 50px auto;
+
 /*navbar */
 .navbar-fixed .page-content, .navbar-through .page-content {
     padding-top: 44px;
@@ -177,4 +181,5 @@ margin-top: 10px;
 .qr{
     width: 100%;
     height: auto;
+
 }

@@ -35,6 +35,8 @@ var mainView = myApp.addView('.view-main', {
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
+
+    
 });
 
 // Now we need to run the code that will be executed only for About page.
