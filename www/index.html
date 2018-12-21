@@ -37,62 +37,190 @@
 </head>
 
 <body>
-    <div class = "views">
-        <div class = "view view-main">
-        
-            <div class="navbar">
-                <div class="navbar-inner sliding">
-                  
-                  <div class="title"><img src="img/used toys skrift.png"></div>
-                </div>
-              </div>
-           
-           <div class = "pages">
-              <div data-page = "index" class = "page navbar-fixed">
-                 <div class = "page-content ItemShowcase">
-                        <div class="row choose-cat">
-                                <div class="col-33 btnWrapper"><p ><a href="#" class="external button button-fill">Kategori</a></p></div>                                
-                                <div class="col-33 btnWrapper"><p><a href="#" class="external button button-fill">Søg</a></p></div>
-                                <div class="col-33 btnWrapper"><p><a href="forside.html" class="external button button-fill">Login</a></p></div>
-                            </div>
-                    <div class = "content-block">                                                     
-                         <div class="row itemRow">
-                            <div class="col-50">
-                                <div class="card demo-card-header-pic">
-                                    <div style="background-image:url(img/999999-02521707910.jpg)" class="card-header align-items-flex-end"></div>
-                                    <div class="card-content card-content-padding">
-                                      <p class="date">Posted on January 21, 2015</p>
-                                      <p>Quisque eget vestibulum nulla.</p>
-                                    </div>
-                                    <div class="card-footer">Pris<a href="#" class="link">Læs mere</a></div>
-                                  </div>
-                            </div>
-                                  <div class="col-50">
-                                  <div class="card demo-card-header-pic">
-                                    <div style="background-image:url(img/41KoFt-h+rL.jpg)" class="card-header align-items-flex-end"></div>
-                                    <div class="card-content card-content-padding">
-                                      <p class="date">Posted on January 21, 2015</p>
-                                      <p>Quisque eget vestibulum nulla.</p>
-                                    </div>
-                                    <div class="card-footer">Pris<a href="#" class="link">læse mere</a></div>
-                                  </div>
-                                </div>
-                             
-                         </div>
-                    
-                    </div>
+   <div class="views">
+      <div class="view view-main">
+
+         <!-- <div class = "navbar">
+              <div class = "navbar-inner">
+                 <div class = "center sliding">
+                     <img src="fonts/font.png">                   
                  </div>
-                 
-                 <div class="navbar navbar-bottom">
-              
+              </div>
+           </div> -->
+
+         <div class="pages">
+            <div data-page="index" class="page navbar-fixed">
+
+                  <div class="fab fab-right-bottom">
+                        <a href="#">
+                          <!-- First icon is visible when Speed Dial actions are closed -->
+                          <i class="icon f7-icons">add</i>
+                          <!-- Second icon is visible when Speed Dial actions are opened -->
+                          <i class="icon f7-icons">close</i>
+                        </a>
+                        <!-- Speed Dial action buttons -->
+                        <div class="fab-buttons fab-buttons-bottom">
+                          <a href="#">1</a>
+                          <a href="#">2</a>
+                          <a href="#">3</a>
+                        </div>
                       </div>
-                      <!-- Fixed Toolbar -->
-                      <div class="toolbar">
-                        <div class="toolbar-inner">
-                                <a class="link external" href="index.html"><img src="img/home.png"></a>
-                                <a class="link external" href="buy.html"><img src="img/sale.png"></a>
-                                <a class="link external" href="sale.html"><img src="img/sell.png"></a>
-                                <a class="link external" href="about.html""><img src="img/profile.png"></a>
+
+
+               <div class="page-content ItemShowcase">
+
+                  <div class="hide-when-logged-in">
+                     <div class="row ">
+                        <div class="col">
+                           <h2>Konceptintro</h2>
+                           <p>Lorem ipsum</p>
+                        </div>
+
+                     </div>
+                     <div class="row ">
+                        <div class="col">
+                           <h2>Introduktion til spil</h2>
+                           <p>Sejt billede og beskrivelse</p>
+                        </div>
+
+                     </div>
+                     <div class="row ">
+                        <div class="col">
+                           <h2>Guide til hvordan man kommer igang</h2>
+                           <p>Opret dig --> køb/sælg ting --> klar!</p>
+                        </div>
+
+                     </div>
+                     <div class="row ">
+                        <div class="col">
+                           <h2>Kom igang!</h2>
+                           <a href="./login.html" class="tab-link" data-route-tab-id="login">HER!</a>
+                        </div>
+
+                     </div>
+                  </div>
+
+
+                  <!-- <div class="row choose-cat">
+                                <div class="col-33 btnWrapper"><p ><a href="#" class="external button">Kategori</a></p></div>                                
+                                <div class="col-33 btnWrapper"><p><a href="#" class="external button">Søg</a></p></div>
+                                <div class="col-33 btnWrapper"><p><a href="forside.html" class="external button">Login</a></p></div>
+                            </div> -->
+                  <div class="content-block">
+                     <div class="row itemRow">
+                        <div class="col-50 showcaseitem">
+                           <div class="col-100 imagePlaceholder">
+                              <img src="img/41KoFt-h+rL.jpg" />
+                           </div>
+                           <div class="col-100 itemText">
+                              <div class="textWrapper">
+
+                                 <h5>Thomas Andersen</h5>
+                                 <h5>Brugt meget lidt</h5>
+                                 <h5>Pris : 150kr</h5>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-50 showcaseitem">
+                           <div class="col-100 imagePlaceholder">
+                              <img src="img/s-l960.jpg">
+                           </div>
+                           <div class="col-100 itemText">
+                              <h5>Thomas Andersen</h5>
+                              <h5>Brugt meget lidt</h5>
+                              <h5>Pris : 150kr</h5>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row itemRow">
+                        <div class="col-50 showcaseitem">
+                           <div class="col-100 imagePlaceholder">
+                              <img src="img/41KoFt-h+rL.jpg" />
+                           </div>
+                           <div class="col-100 itemText">
+                              <h5>Thomas Andersen</h5>
+                              <h5>Brugt meget lidt</h5>
+                              <h5>Pris : 150kr</h5>
+                           </div>
+                        </div>
+                        <div class="col-50 showcaseitem">
+                           <div class="col-100 imagePlaceholder">
+                              <img src="img/999999-02521707910.jpg">
+                           </div>
+                           <div class="col-100 itemText">
+                              <h5>Thomas Andersen</h5>
+                              <h5>Brugt meget lidt</h5>
+                              <h5>Pris : 150kr</h5>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- <div class="row itemRow">
+                            <div class="col-50 showcaseitem">
+                                    <div class="col-100 imagePlaceholder">
+                                <img src="img/41KoFt-h+rL.jpg"/>
+                                    </div>
+                                <div class="col-100 itemText">
+                                    <h5>Thomas Andersen</h5>
+                                    <h5>Brugt meget lidt</h5>
+                                    <h5>Pris : 150kr</h5>
+                                </div>
+                            </div>
+                            <div class="col-50 showcaseitem">
+                                    <div class="col-100 imagePlaceholder">
+                                <img src="img/999999-02521707910.jpg">
+                                    </div>
+                                <div class="col-100 itemText">
+                                    <h5>Thomas Andersen</h5>
+                                    <h5>Brugt meget lidt</h5>
+                                    <h5>Pris : 150kr</h5>
+                                </div>
+                            </div>                            
+                         </div>     -->
+                     <!-- <div class="row itemRow">
+                            <div class="col-50 showcaseitem">
+                                    <div class="col-100 imagePlaceholder">
+                                <img src="img/41KoFt-h+rL.jpg"/>
+                                    </div>
+                                <div class="col-100 itemText">
+                                    <h5>Thomas Andersen</h5>
+                                    <h5>Brugt meget lidt</h5>
+                                    <h5>Pris : 150kr</h5>
+                                </div>
+                            </div>
+                            <div class="col-50 showcaseitem">
+                                    <div class="col-100 imagePlaceholder">
+                                <img src="img/999999-02521707910.jpg">
+                                    </div>
+                                <div class="col-100 itemText">
+                                    <h5>Thomas Andersen</h5>
+                                    <h5>Brugt meget lidt</h5>
+                                    <h5>Pris : 150kr</h5>
+                                </div>
+                            </div>                            
+                         </div>  -->
+
+                     <div class="row itemRow">
+
+                        <div class="card demo-card-header-pic">
+                           <div style="background-image:url(img/999999-02521707910.jpg)" class="card-header align-items-flex-end">Journey
+                              To Mountains</div>
+                           <div class="card-content card-content-padding">
+                              <p class="date">Posted on January 21, 2015</p>
+                              <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non
+                                 felis. Phasellus quis nibh hendrerit...</p>
+                           </div>
+                           <div class="card-footer"><a href="#" class="link">Like</a><a href="#" class="link">Read more</a></div>
+                        </div>
+
+                        <div class="card demo-card-header-pic">
+                           <div style="background-image:url(img/41KoFt-h+rL.jpg)" class="card-header align-items-flex-end">Lorem
+                              Ipsum</div>
+                           <div class="card-content card-content-padding">
+                              <p class="date">Posted on January 21, 2015</p>
+                              <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non
+                                 felis. Phasellus quis nibh hendrerit...</p>
+                           </div>
+                           <div class="card-footer"><a href="#" class="link">Like</a><a href="#" class="link">Read more</a></div>
                         </div>
 
                      </div>
