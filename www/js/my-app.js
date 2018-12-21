@@ -1,21 +1,26 @@
 // Initialize app
 var myApp = new Framework7({
     routes: [
-        {
+      {
+        path: '/index/',
+        url: 'index.html',
+      },  
+      {
           path: '/about/',
           url: 'about.html',
         },
         {
-        path: '/sale/',
-        url: 'sale.html',
+        path: '/create-listing/',
+        url: 'create-listing.html',
         },
         {
         path: '/buy/',
         url: 'buy.html',
          },
          {
-        path: '/forside/',
-         url: 'forside.html',
+        path: '/login/',
+        id: 'login',
+         url: 'login.html',
          }
     ]
     
@@ -43,7 +48,7 @@ $$(document).on('deviceready', function() {
 
 // Option 1. Using page callback for page (for "about" page in this case) (recommended way):
 myApp.onPageInit('login-screen', function (page) {
-    
+
   });  
 
 // Option 2. Using one 'pageInit' event handler for all pages:

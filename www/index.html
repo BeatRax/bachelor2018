@@ -31,19 +31,8 @@
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
     <link rel="stylesheet" href="css/styles.css">
-   <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+    
 
-   <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
-   <script>
-      var config = {
-         apiKey: "AIzaSyBB5FrvVkgwLiRw0-oBG0s2sd5SlffYeTI",
-         authDomain: "usedtoys-e4d2b.firebaseapp.com",
-         databaseURL: "https://usedtoys-e4d2b.firebaseio.com",
-         projectId: "usedtoys-e4d2b"
-      };
-      var defaultApp = firebase.initializeApp(config);
-   </script>
    
 </head>
 
@@ -51,22 +40,55 @@
     <div class = "views">
         <div class = "view view-main">
         
-           <div class = "navbar">
+           <!-- <div class = "navbar">
               <div class = "navbar-inner">
                  <div class = "center sliding">
                      <img src="fonts/font.png">                   
                  </div>
               </div>
-           </div>
+           </div> -->
            
            <div class = "pages">
               <div data-page = "index" class = "page navbar-fixed">
                  <div class = "page-content ItemShowcase">
-                        <div class="row choose-cat">
+                    
+                    <div class="hide-when-logged-in">
+                     <div class="row ">
+                        <div class="col">
+                              <h2>Konceptintro</h2>
+                              <p>Lorem ipsum</p>
+                        </div>
+                        
+                     </div>
+                     <div class="row ">
+                           <div class="col">
+                                 <h2>Introduktion til spil</h2>
+                                 <p>Sejt billede og beskrivelse</p>
+                           </div>
+                           
+                        </div>
+                     <div class="row ">
+                           <div class="col">
+                                 <h2>Guide til hvordan man kommer igang</h2>
+                                 <p>Opret dig --> køb/sælg ting --> klar!</p>
+                           </div>
+                           
+                        </div>
+                        <div class="row ">
+                              <div class="col">
+                                    <h2>Kom igang!</h2>
+                                    <a href="./login.html" class="tab-link" data-route-tab-id="login">HER!</a>
+                              </div>
+                              
+                           </div>
+                        </div>
+
+
+                        <!-- <div class="row choose-cat">
                                 <div class="col-33 btnWrapper"><p ><a href="#" class="external button">Kategori</a></p></div>                                
                                 <div class="col-33 btnWrapper"><p><a href="#" class="external button">Søg</a></p></div>
                                 <div class="col-33 btnWrapper"><p><a href="forside.html" class="external button">Login</a></p></div>
-                            </div>
+                            </div> -->
                     <div class = "content-block">                            
                        <div class="row itemRow">
                             <div class="col-50 showcaseitem">
@@ -186,8 +208,8 @@
                  </div>
                 
                 
-                <div class="row no-gap tester">
-                        <div class="col">
+                <!-- <div class="row no-gap tester"> -->
+                        <!-- <div class="col">
 
                         </div>
                         <div class="col">
@@ -211,7 +233,7 @@
                         </div>
                         <div class="col"></div>
                      </div>
-                  </div>
+                  </div> -->
                  <!-- <div class = "login-screen modal-in">
                         <div class = "view">
                            <div class = "page">
@@ -255,9 +277,6 @@
                            </div>
                         </div>
                      </div>  -->
-                 <div class="navbar navbar-bottom">
-              
-                      </div>
                       <!-- Fixed Toolbar -->
                       <div class="toolbar">
                         <div class="toolbar-inner">
@@ -274,8 +293,10 @@
         </div>
      </div>
      
-
-
+   <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+   <script type="text/javascript" src="js/jquery_3.3.1.js"></script>
    <script type="text/javascript" src="cordova.js"></script>
    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
    <script type="text/javascript" src="js/my-app.js"></script>
