@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <!--
+   <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
         Some notes:
@@ -10,94 +11,133 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+   <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+   <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+   <!-- Required meta tags-->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+   <meta name="format-detection" content="telephone=no">
+   <meta name="msapplication-tap-highlight" content="no">
 
-    <!-- Required meta tags-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
+   <!-- Your app title -->
+   <title>My App</title>
 
-    <!-- Your app title -->
-    <title>My App</title>
-
-    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+   <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
         http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
      -->
 
-    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
-    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-   
+   <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+   <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+   <link rel="stylesheet" href="css/styles.css">
+   <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+
+   <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+   <script>
+      var config = {
+         apiKey: "AIzaSyBB5FrvVkgwLiRw0-oBG0s2sd5SlffYeTI",
+         authDomain: "usedtoys-e4d2b.firebaseapp.com",
+         databaseURL: "https://usedtoys-e4d2b.firebaseio.com",
+         projectId: "usedtoys-e4d2b"
+      };
+      var defaultApp = firebase.initializeApp(config);
+   </script>
+
+
+
 </head>
 
 <body>
-    <div class = "views">
-        <div class = "view view-main">
-        
-           <div class = "navbar">
-              <div class = "navbar-inner">
-                 <div class = "center sliding">
-                     <p>Usedtoys (db-connection branch test)</p>
-                 </div>
-              </div>
-           </div>
-           
-           <div class = "pages">
-              <div data-page = "index" class = "page navbar-fixed">
-                 <div class = "page-content">
-                    <div class = "content-block searchbar-top">                            
-                            <form class="searchbar">
-                              <div class="searchbar-inner">
-                                <div class="searchbar-input-wrap">
-                                  <input type="search" placeholder="Search">
-                                  <i class="searchbar-icon"></i>
-                                  <span class="input-clear-button"></span>
-                                </div>
-                                <span class="searchbar-disable-button">Cancel</span>
-                              </div>
-                            </form>
-                       <p><a href="#" class="open-login-screen">Click here to log out</a></p>
-                       <div class="row">
-                            <div class="col-33">33% (.col)</div>
-                            <div class="col-33">33% (.col)</div>
-                            <div class="col-33">33% (.col)</div>
-                         </div>
-                        <div class="row">
-                            <div class="col-33">33% (.col)</div>
-                            <div class="col-33">33% (.col)</div>
-                            <div class="col-33">33% (.col)</div>
+   <div class="views">
+      <div class="view view-main">
+
+         <div class="navbar">
+            <div class="navbar-inner">
+               <div class="center sliding">
+                  <p>Usedtoys (db-connection branch)</p>
+               </div>
+            </div>
+         </div>
+
+         <div class="pages">
+            <div data-page="index" class="page navbar-fixed">
+               <div class="page-content">
+                  <div class="content-block searchbar-top">
+                     <form class="searchbar">
+                        <div class="searchbar-inner">
+                           <div class="searchbar-input-wrap">
+                              <input type="search" placeholder="Search">
+                              <i class="searchbar-icon"></i>
+                              <span class="input-clear-button"></span>
+                           </div>
+                           <span class="searchbar-disable-button">Cancel</span>
                         </div>
-                        <div class="row">
-                            <div class="col-33">33% (.col)</div>
-                            <div class="col-33">33% (.col)</div>
-                            <div class="col-33">33% (.col)</div>
-                        </div>                         
-                    
-                    </div>
-                 </div>
-                 <div class="navbar">
-                        ...
-                      </div>
-                      <!-- Fixed Toolbar -->
-                      <div class="toolbar">
-                        <div class="toolbar-inner">
-                          <a class="link external" href="about.html"">Link 1</a>
-                          <a class="link">Link 2</a>
-                          <a class="link">Link 3</a>
+                     </form>
+                     <p><a href="#" class="open-login-screen">Click here to log out</a></p>
+                     <div class="row">
+                        <div class="col-33">33% (.col)</div>
+                        <div class="col-33">33% (.col)</div>
+                        <div class="col-33">33% (.col)</div>
+                     </div>
+                     <div class="row">
+                        <div class="col-33">33% (.col)</div>
+                        <div class="col-33">33% (.col)</div>
+                        <div class="col-33">33% (.col)</div>
+                     </div>
+                     <div class="row">
+                        <div class="col-33">33% (.col)</div>
+                        <div class="col-33">33% (.col)</div>
+                        <div class="col-33">33% (.col)</div>
+                     </div>
+                     <div class="row no-gap tester">
+                        <div class="col">
+
                         </div>
-                      </div>
-                     
-              </div>
-           </div>
-           
-        </div>
-     </div>
-     
-     
-     <!-- <div class = "login-screen modal-in">
+                        <div class="col">
+                           <p>Create user</p>
+                           <input name="email" type="text" required placeholder="Email">
+                           <input name="password" type="password" required placeholder="Password">
+                           <button class="button sign-up">Sign up</button>
+                           <button class="button log-in">Log in</button>
+                           <button class="button log-out">Log out</button>
+                        </div>
+                        <div class="col"></div>
+                     </div>
+                     <div class="row no-gap tester">
+                        <div class="col">
+
+                        </div>
+                        <div class="col">
+                           <p>Get user</p>
+                           <input name="username" type="text" placeholder="Enter your username here">
+                           <button class="button col">Click here to get user</button>
+                        </div>
+                        <div class="col"></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="navbar">
+                  ...
+               </div>
+               <!-- Fixed Toolbar -->
+               <div class="toolbar">
+                  <div class="toolbar-inner">
+                     <a class="link external" href="about.html">Link 1</a>
+                     <a class=" link">Ch</a>
+                     <a class="link">Link 3</a>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+
+   <!-- <div class = "login-screen modal-in">
         <div class = "view">
            <div class = "page">
               <div class = "page-content login-screen-content">
@@ -138,13 +178,12 @@
            </div>
         </div>
      </div>  -->
+   <script type="text/javascript" src="js/jquery_3.3.1.js"></script>
 
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
-    <script type="text/javascript" src="js/my-app.js"></script>
+   <script type="text/javascript" src="cordova.js"></script>
+   <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+   <script type="text/javascript" src="js/my-app.js"></script>
+   <script type="text/javascript" src="js/index.js"></script>
 </body>
 
 </html>
-
-
-
