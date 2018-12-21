@@ -23,14 +23,14 @@
 
    <!-- Your app title -->
    <title>My App</title>
-
-   <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+ 
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
         http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
      -->
 
-   <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
-   <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
-   <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/styles.css">
    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
 
@@ -44,54 +44,149 @@
       };
       var defaultApp = firebase.initializeApp(config);
    </script>
-
-
-
+   
 </head>
 
 <body>
-   <div class="views">
-      <div class="view view-main">
-
-         <div class="navbar">
-            <div class="navbar-inner">
-               <div class="center sliding">
-                  <p>Usedtoys (db-connection branch)</p>
-               </div>
-            </div>
-         </div>
-
-         <div class="pages">
-            <div data-page="index" class="page navbar-fixed">
-               <div class="page-content">
-                  <div class="content-block searchbar-top">
-                     <form class="searchbar">
-                        <div class="searchbar-inner">
-                           <div class="searchbar-input-wrap">
-                              <input type="search" placeholder="Search">
-                              <i class="searchbar-icon"></i>
-                              <span class="input-clear-button"></span>
-                           </div>
-                           <span class="searchbar-disable-button">Cancel</span>
-                        </div>
-                     </form>
-                     <p><a href="#" class="open-login-screen">Click here to log out</a></p>
-                     <div class="row">
-                        <div class="col-33">33% (.col)</div>
-                        <div class="col-33">33% (.col)</div>
-                        <div class="col-33">33% (.col)</div>
-                     </div>
-                     <div class="row">
-                        <div class="col-33">33% (.col)</div>
-                        <div class="col-33">33% (.col)</div>
-                        <div class="col-33">33% (.col)</div>
-                     </div>
-                     <div class="row">
-                        <div class="col-33">33% (.col)</div>
-                        <div class="col-33">33% (.col)</div>
-                        <div class="col-33">33% (.col)</div>
-                     </div>
-                     <div class="row no-gap tester">
+    <div class = "views">
+        <div class = "view view-main">
+        
+           <div class = "navbar">
+              <div class = "navbar-inner">
+                 <div class = "center sliding">
+                     <img src="fonts/font.png">                   
+                 </div>
+              </div>
+           </div>
+           
+           <div class = "pages">
+              <div data-page = "index" class = "page navbar-fixed">
+                 <div class = "page-content ItemShowcase">
+                        <div class="row choose-cat">
+                                <div class="col-33 btnWrapper"><p ><a href="#" class="external button">Kategori</a></p></div>                                
+                                <div class="col-33 btnWrapper"><p><a href="#" class="external button">Søg</a></p></div>
+                                <div class="col-33 btnWrapper"><p><a href="forside.html" class="external button">Login</a></p></div>
+                            </div>
+                    <div class = "content-block">                            
+                       <div class="row itemRow">
+                            <div class="col-50 showcaseitem">
+                                <div class="col-100 imagePlaceholder">
+                                 <img src="img/41KoFt-h+rL.jpg"/>
+                                </div>
+                                <div class="col-100 itemText">
+                                    <div class="textWrapper">
+                                    
+                                    <h5>Thomas Andersen</h5>
+                                    <h5>Brugt meget lidt</h5>
+                                    <h5>Pris : 150kr</h5>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-50 showcaseitem">
+                                    <div class="col-100 imagePlaceholder">
+                                <img src="img/s-l960.jpg">
+                                    </div>
+                                <div class="col-100 itemText">
+                                    <h5>Thomas Andersen</h5>
+                                    <h5>Brugt meget lidt</h5>
+                                    <h5>Pris : 150kr</h5>
+                                </div>
+                            </div>                            
+                         </div>
+                         <div class="row itemRow">
+                            <div class="col-50 showcaseitem">
+                                    <div class="col-100 imagePlaceholder">
+                                <img src="img/41KoFt-h+rL.jpg"/>
+                                    </div>
+                                <div class="col-100 itemText">
+                                    <h5>Thomas Andersen</h5>
+                                    <h5>Brugt meget lidt</h5>
+                                    <h5>Pris : 150kr</h5>
+                                </div>
+                            </div>
+                            <div class="col-50 showcaseitem">
+                                    <div class="col-100 imagePlaceholder">
+                                <img src="img/999999-02521707910.jpg">
+                                    </div>
+                                <div class="col-100 itemText">
+                                    <h5>Thomas Andersen</h5>
+                                    <h5>Brugt meget lidt</h5>
+                                    <h5>Pris : 150kr</h5>
+                                </div>
+                            </div>                            
+                         </div>   
+                         <!-- <div class="row itemRow">
+                            <div class="col-50 showcaseitem">
+                                    <div class="col-100 imagePlaceholder">
+                                <img src="img/41KoFt-h+rL.jpg"/>
+                                    </div>
+                                <div class="col-100 itemText">
+                                    <h5>Thomas Andersen</h5>
+                                    <h5>Brugt meget lidt</h5>
+                                    <h5>Pris : 150kr</h5>
+                                </div>
+                            </div>
+                            <div class="col-50 showcaseitem">
+                                    <div class="col-100 imagePlaceholder">
+                                <img src="img/999999-02521707910.jpg">
+                                    </div>
+                                <div class="col-100 itemText">
+                                    <h5>Thomas Andersen</h5>
+                                    <h5>Brugt meget lidt</h5>
+                                    <h5>Pris : 150kr</h5>
+                                </div>
+                            </div>                            
+                         </div>     -->
+                         <!-- <div class="row itemRow">
+                            <div class="col-50 showcaseitem">
+                                    <div class="col-100 imagePlaceholder">
+                                <img src="img/41KoFt-h+rL.jpg"/>
+                                    </div>
+                                <div class="col-100 itemText">
+                                    <h5>Thomas Andersen</h5>
+                                    <h5>Brugt meget lidt</h5>
+                                    <h5>Pris : 150kr</h5>
+                                </div>
+                            </div>
+                            <div class="col-50 showcaseitem">
+                                    <div class="col-100 imagePlaceholder">
+                                <img src="img/999999-02521707910.jpg">
+                                    </div>
+                                <div class="col-100 itemText">
+                                    <h5>Thomas Andersen</h5>
+                                    <h5>Brugt meget lidt</h5>
+                                    <h5>Pris : 150kr</h5>
+                                </div>
+                            </div>                            
+                         </div>  -->
+                         
+                         <div class="row itemRow">
+                             
+                                <div class="card demo-card-header-pic">
+                                    <div style="background-image:url(img/999999-02521707910.jpg)" class="card-header align-items-flex-end">Journey To Mountains</div>
+                                    <div class="card-content card-content-padding">
+                                      <p class="date">Posted on January 21, 2015</p>
+                                      <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                                    </div>
+                                    <div class="card-footer"><a href="#" class="link">Like</a><a href="#" class="link">Read more</a></div>
+                                  </div>
+                                  
+                                  <div class="card demo-card-header-pic">
+                                    <div style="background-image:url(img/41KoFt-h+rL.jpg)" class="card-header align-items-flex-end">Lorem Ipsum</div>
+                                    <div class="card-content card-content-padding">
+                                      <p class="date">Posted on January 21, 2015</p>
+                                      <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                                    </div>
+                                    <div class="card-footer"><a href="#" class="link">Like</a><a href="#" class="link">Read more</a></div>
+                                  </div>
+                             
+                         </div>
+                    
+                    </div>
+                 </div>
+                
+                
+                <div class="row no-gap tester">
                         <div class="col">
 
                         </div>
@@ -117,68 +212,69 @@
                         <div class="col"></div>
                      </div>
                   </div>
-               </div>
-               <div class="navbar">
-                  ...
-               </div>
-               <!-- Fixed Toolbar -->
-               <div class="toolbar">
-                  <div class="toolbar-inner">
-                     <a class="link external" href="about.html">Link 1</a>
-                     <a class=" link">Ch</a>
-                     <a class="link">Link 3</a>
-                  </div>
-               </div>
+                 <!-- <div class = "login-screen modal-in">
+                        <div class = "view">
+                           <div class = "page">
+                              <div class = "page-content login-screen-content">
+                                 <div class = "login-screen-title">Login</div>
+                                 
+                                 <form>
+                                    <div class = "list-block">
+                                       <ul>
+                                          <li class = "item-content">
+                                             <div class = "item-inner">
+                                                <div class = "item-title label">Brugernavn</div>
+                                                <div class = "item-input">
+                                                   <input type = "text" name = "username" placeholder = "Enter brugernavn">
+                                                </div>
+                                             </div>
+                                          </li>
+                                          
+                                          <li class = "item-content">
+                                             <div class = "item-inner">
+                                                <div class = "item-title label">Password</div>
+                                                <div class = "item-input">
+                                                   <input type = "password" name = "password" placeholder = "Enter password">
+                                                </div>
+                                             </div>
+                                          </li>
+                                       </ul>
+                                    </div>
 
-            </div>
-         </div>
-
-      </div>
-   </div>
-
-
-   <!-- <div class = "login-screen modal-in">
-        <div class = "view">
-           <div class = "page">
-              <div class = "page-content login-screen-content">
-                 <div class = "login-screen-title">Login Here</div>
-                 <form>
-                    <div class = "list-block">
-                       <ul>
-                          <li class = "item-content">
-                             <div class = "item-inner">
-                                <div class = "item-title label">Username</div>
-                                <div class = "item-input">
-                                   <input type = "text" name = "username" placeholder = "Enter the username">
-                                </div>
-                             </div>
-                          </li>
-                          
-                          <li class = "item-content">
-                             <div class = "item-inner">
-                                <div class = "item-title label">Password</div>
-                                <div class = "item-input">
-                                   <input type = "password" name = "password" placeholder = "Enter the password">
-                                </div>
-                             </div>
-                          </li>
-                       </ul>
-                    </div>
-                    
-                    <div class = "list-block">
-                       <ul>
-                          <li><a href = "#" class = "item-link list-button">Log In</a></li>
-                       </ul>
-                       
-                       
-                    </div>
-                 </form>
-                 
+                                    <div class = "list-block">
+                                       <ul>
+                                          <li><a href = "#" class = "item-link list-button">Log In</a></li>
+                                       </ul>                                       
+                                       <div class = "list-block-label">
+                                          <p><a href = "#" class = "close-login-screen">Luk login</a></p>
+                                       </div>
+                                    </div>
+                                 </form>
+                                 
+                              </div>
+                           </div>
+                        </div>
+                     </div>  -->
+                 <div class="navbar navbar-bottom">
+              
+                      </div>
+                      <!-- Fixed Toolbar -->
+                      <div class="toolbar">
+                        <div class="toolbar-inner">
+                                <a class="link external" href="index.html"><img src="img/home.png"></a>
+                                <a class="link external" href="buy.html"><img src="img/sale.png"></a>
+                                <a class="link external" href="sale.html"><img src="img/sell.png"></a>
+                                <a class="link external" href="about.html""><img src="img/profile.png"></a>
+                        </div>
+                      </div>
+                     
               </div>
            </div>
+           
         </div>
-     </div>  -->
-   <script type="text/javascript" src="js/jquery_3.3.1.js"></script>
+     </div>
+     
+
 
    <script type="text/javascript" src="cordova.js"></script>
    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>

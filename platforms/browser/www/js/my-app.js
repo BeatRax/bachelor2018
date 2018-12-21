@@ -1,5 +1,25 @@
 // Initialize app
-var myApp = new Framework7();
+var myApp = new Framework7({
+    routes: [
+        {
+          path: '/about/',
+          url: 'about.html',
+        },
+        {
+        path: '/sale/',
+        url: 'sale.html',
+        },
+        {
+        path: '/buy/',
+        url: 'buy.html',
+         },
+         {
+        path: '/forside/',
+         url: 'forside.html',
+         }
+    ]
+    
+});
 
 
 // If we need to use custom DOM library, let's save it to $$ variable:
@@ -11,6 +31,7 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
+  
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
@@ -18,14 +39,12 @@ $$(document).on('deviceready', function() {
     
 });
 
-
 // Now we need to run the code that will be executed only for About page.
 
 // Option 1. Using page callback for page (for "about" page in this case) (recommended way):
-myApp.onPageInit('about', function (page) {
-    // Do something here for "about" page
-
-})
+myApp.onPageInit('login-screen', function (page) {
+    
+  });  
 
 // Option 2. Using one 'pageInit' event handler for all pages:
 $$(document).on('pageInit', function (e) {
@@ -43,3 +62,42 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     // Following code will be executed for page with data-page attribute equal to "about"
     myApp.alert('Here comes About page');
 })
+
+//login screen po up
+$$('.login-screen .list-button').on('click', function () {
+    var uname = $$('.login-screen input[name = "username"]').val();
+    var pwd = $$('.login-screen input[name = "password"]').val();
+    
+    myApp.alert('Username: ' + uname + ', Password: ' + pwd, function () {
+       myApp.closeModal('.login-screen');
+    });
+ });
+
+ //
+
+
+
+// Dom Events
+$$('.panel-left').on('panel:open', function () {
+  console.log('Panel left: open');
+});
+$$('.panel-left').on('panel:opened', function () {
+  console.log('Panel left: opened');
+});
+
+// Instance Events
+var panelRight = myApp.panel.right;
+panelRight.on('open', function () {
+  console.log('Panel right: open');
+});
+panelRight.on('opened', function () {
+  console.log('Panel right: opened');
+});
+
+// App Events
+myApp.on('panelClose', function (panel) {
+  console.log('Panel ' + panel.side + ': close');
+});
+myApp.on('panelClosed', function (panel) {
+  console.log('Panel ' + panel.side + ': closed');
+});
