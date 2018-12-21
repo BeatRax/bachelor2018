@@ -22,12 +22,16 @@
     padding-bottom: 44px;
 }
 .navbar{
-    background-color: #C6FFDD;
+    background-color: white;
+}
+
+.navbar img{
+    margin-bottom: 10px;
 }
 
 /* toolbar */
 .toolbar{
-    background-color: #f7797d;
+    background-color: white;
 }
 
 .toolbar .toolbar-inner a img{
@@ -43,7 +47,7 @@ height: auto;
 }
 
 .forside {
-    background-image: linear-gradient(#C6FFDD,#FBD786, #f7797d); /* Standard syntax (must be last) */
+    background-image: linear-gradient(#32ff7e,#78e08f, #3ae374);
 }
 
 .iconWrapper{
@@ -57,7 +61,7 @@ height: auto;
 }
 
 .login-screen-content{
-    background-image: linear-gradient(#C6FFDD,#FBD786, #f7797d);
+    background-image: linear-gradient(#32ff7e,#78e08f, #3ae374);
 }
 /*Index.html*/
 .searchbar-top{
@@ -114,7 +118,7 @@ text-justify: auto;
     height: 100%;
 }
 .itemText{
-    background-color: rgba(255, 255, 255, 0.678);
+    background-color: white;
     margin-top: -10px;
     margin-top: -10px;
     padding: 0;
@@ -130,7 +134,11 @@ text-justify: auto;
 }
 
 .ItemShowcase{
-    background-image: linear-gradient(#C6FFDD,#FBD786, #f7797d); /* Standard syntax (must be last) */
+    background-image: linear-gradient(#32ff7e,#78e08f, #3ae374); /* Standard syntax (must be last) */
+}
+
+.demo-card-header-pic{
+    margin: 0;
 }
 
 /*about.html*/
@@ -168,8 +176,8 @@ text-justify: auto;
 }
 
 .button.button-fill {
-    color: #fff;
-    background: green;
+    color: black;
+    background: #fff;
     border: none;
 margin-top: 10px;
 }
