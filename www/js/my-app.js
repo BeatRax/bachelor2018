@@ -51,9 +51,9 @@ $$(document).on('deviceready', function () {
 // Now we need to run the code that will be executed only for About page.
 
 // Option 1. Using page callback for page (for "about" page in this case) (recommended way):
-myApp.onPageInit('login-screen', function (page) {
+// myApp.onPageInit('login-screen', function (page) {
 
-});
+// });
 
 // Option 2. Using one 'pageInit' event handler for all pages:
 $$(document).on('pageInit', function (e) {
@@ -95,13 +95,13 @@ $$('.panel-left').on('panel:opened', function () {
 });
 
 // Instance Events
-var panelRight = myApp.panel.right;
-panelRight.on('open', function () {
-  console.log('Panel right: open');
-});
-panelRight.on('opened', function () {
-  console.log('Panel right: opened');
-});
+// var panelRight = myApp.panel.right;
+// panelRight.on('open', function () {
+//   console.log('Panel right: open');
+// });
+// panelRight.on('opened', function () {
+//   console.log('Panel right: opened');
+// });
 
 // App Events
 myApp.on('panelClose', function (panel) {
