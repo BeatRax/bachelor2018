@@ -1,5 +1,9 @@
 // Initialize app
 var myApp = new Framework7({
+  touch: {
+    // enabled for development
+    disableContextMenu:false
+    },
   routes: [
     {
       path: '/index/',
