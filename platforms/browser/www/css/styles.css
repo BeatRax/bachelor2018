@@ -33,7 +33,7 @@ html {
 
 .md .navbar {
     height: 56px;
-    background-color: #AEE9E8;
+    background-color: #D0D3D5;
     color: #fff;
     font-size: 20px;
 }
@@ -50,7 +50,7 @@ html {
 /* toolbar */
 .toolbar{
     background-color: #fff;
-    box-shadow: 0px 0px 5px #AEE9E8;
+    box-shadow: 0px 0px 5px #D0D3D5;
     height: 70px !important;
     position: absolute;
     bottom: 0;
@@ -72,7 +72,7 @@ html {
 }
 
 .md .toolbar {
-    background-color: #AEE9E8;
+    background-color: #D0D3D5;
     height: 48px;
     color: #fff;
     font-size: 14px;
@@ -136,6 +136,10 @@ height: auto;
     margin: 0px;
     -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.card{
+    height: 175px;
 }
 
 .btnWrapper{
