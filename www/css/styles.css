@@ -72,7 +72,7 @@ html {
 }
 
 .md .toolbar {
-    background-color: #D0D3D5;
+    background-color: #FFAAA6;
     height: 48px;
     color: #fff;
     font-size: 14px;
@@ -133,13 +133,18 @@ height: auto;
   }
 
   .md .card {
-    margin: 0px;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
     -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 5px 6px 1px -1px rgba(0, 0, 0, 0.2), 0px 3px 3px 0px rgba(0, 0, 0, 0.14), 0px 1px 6px 0px rgba(0, 0, 0, 0.12);
 }
 
-.card{
+
+.introcard{
     height: 175px;
+}
+.avaterCard{
+    height: 200px;
 }
 
 .btnWrapper{
@@ -219,6 +224,12 @@ text-justify: auto;
     width: 100%;
 }
 
+.avatar-profilbillede {
+    height: auto;
+    width: 100%;
+    margin-top: 10px;
+}
+
 .addItem img{
     border: 1px solid white;
     height: auto;
@@ -251,4 +262,11 @@ margin-top: 10px;
     width: 100%;
     height: auto;
 
+}
+
+/*create listing*/
+
+.md .button.button-fill, .md .button.button-fill-md, .md .button.button-active, .md .button.tab-link-active {
+    background-color: #FFAAA6;
+    color: #fff;
 }
