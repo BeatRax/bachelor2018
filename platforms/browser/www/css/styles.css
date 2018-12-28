@@ -29,6 +29,7 @@ html {
 }
 .content-block {
     padding: 0;
+    margin-bottom: 75px;
 }
 
 .md .navbar {
@@ -231,7 +232,7 @@ text-justify: auto;
 }
 
 .addItem img{
-    border: 1px solid white;
+   
     height: auto;
     width: 100%;
 }
