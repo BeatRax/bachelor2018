@@ -22,7 +22,7 @@
    <meta name="msapplication-tap-highlight" content="no">
 
    <!-- Your app title -->
-   <title>My App</title>
+   <title>Used Toys</title>
 
    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
         http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
@@ -43,25 +43,22 @@
          <div class="pages">
             <div data-page="index" class="page navbar-fixed">
 
-               <div class="fab fab-right-bottom">
-                  <a href="#">
-
-                     <i class="icon f7-icons">add</i>
-
-                     <i class="icon f7-icons">close</i>
-                  </a>
-
-                  <div class="fab-buttons fab-buttons-bottom">
-                     <a href="#">1</a>
-                     <a href="#">2</a>
-                     <a href="#">3</a>
-                  </div>
-               </div>
-
-
-
-               <div class="page-content ItemShowcase">
-
+                  <div class="fab fab-right-bottom">
+                        <a href="#">
+                          <!-- Icons For iOS Theme -->
+                          <i class="icon f7-icons">Genvej</i>
+                           <i class="icon f7-icons">Luk</i>
+                           
+                        </a>
+                        <!-- FAB speed dial actions -->
+                        <div class="fab-buttons fab-buttons-top">
+                          <a href="">QR</a>
+                          <a href="">Opret</a>
+                          <a href="">Besked</a>
+                          
+                        </div>
+                      </div>
+                <div class="page-content ItemShowcase">
                   <div class="hide-when-logged-in">
                      <div class="content-block">
                         <img src="img/used toys skrift.png" class="profilbillede">
@@ -119,7 +116,7 @@
                         </div>
 
                      </div>
-                     <h2>Kom nemt igang</h2>
+                     <h2 style="text-align: center;">Kom nemt igang</h2>
                      <div class="row icons">                       
                            
                            <div class="col-20"><i class="fas fa-user-plus" style="font-size: xx-large;"></i><p>Opret dig</p></div>
@@ -131,8 +128,8 @@
                      </div>
                      <div class="row ">
                         <div class="col">
-                           <h2 style="text-align: center;">Kom igang!</h2>
-                           <a href="./login.html" class="tab-link" data-route-tab-id="login">HER!</a>
+                           <h2 style="text-align: center;">Login <a href="login.html" class="link external" data-route-tab-id="login">HER!</a></h2>
+                           
                         </div>
                      </div>
                   </div>
@@ -145,9 +142,29 @@
                                 <p class="date">Lagt op December 21, 2018</p>
                                 <p>Legetøjsbil, meget lidt brugt, enkelte ridser</p>
                               </div>
-                              <div class="card-footer"><a href="#" class="link">50 kr.</a></div>
+                              <div class="card-footer"><a href="#" class="link">50 kr.</a>
+                                 <p><a class="link popup-open" href="#" data-popup="#1">info</a></p>
+                              </div>
                             </div>
                         </div>
+                        <!--Sheet modal-->
+                        <div class="popup" id="1">  
+                              <div class="toolbar">
+                                    <div class="toolbar-inner">
+                                      <div class="left"><a class="link  popup-close" href="#">Luk ned</a></div>
+                                    </div>
+                                  </div>                         
+                                <div class="content-block" style="margin:10px;">
+
+                                  <h2>Information vedrørende annonce</h2>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p>
+                                 
+                                  <img src="img/maps.JPG" class="maps">
+                                  <a href="#" class="link external button">Kontakt sælger</a>
+                                 </div>
+                             
+                            </div>
                         <div class="col-50">
                         <div class="card demo-card-header-pic">
                            <div style="background-image:url(img/legosale.jpg)" class="card-header align-items-flex-end"></div>
@@ -155,10 +172,31 @@
                              <p class="date">Lagt op December 19, 2018</p>
                              <p>Komplette legosæts. 100kr per sæt</p>
                            </div>
-                           <div class="card-footer"><a href="#" class="link">100kr.</a></div>
+                           <div class="card-footer"><a href="#" class="link">100kr.</a>
+                              <p><a class="link popup-open" href="#" data-popup="#2">info</a></p>
+                           </div>
                          </div>
                          </div>
+                           <!--Sheet modal-->
+                           <div class="popup" id="2">  
+                                 <div class="toolbar">
+                                       <div class="toolbar-inner">
+                                         <div class="left"><a class="link  popup-close" href="#">Luk ned</a></div>
+                                       </div>
+                                     </div>                         
+                                   <div class="content-block" style="margin:10px;">
+   
+                                       <h2>Information vedrørende annonce</h2>
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p>
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p>
+                                    
+                                     <img src="img/maps.JPG" class="maps"> 
+                                     <a href="#" class="link external button">Kontakt sælger</a>
+                                    </div>
+                                
+                               </div>
                      </div>
+
                      <div class="row">
                         <div class="col-50">
                            <div class="card demo-card-header-pic">
@@ -167,9 +205,30 @@
                                 <p class="date">Lagt op December 19, 2018</p>
                                 <p>Brætspil 75 per sæt</p>
                               </div>
-                              <div class="card-footer"><a href="#" class="link">75 kr.</a></div>
+                              <div class="card-footer"><a href="#" class="link">75 kr.</a>
+                                 <p><a class="link popup-open" href="#" data-popup="#3">info</a></p>
+                              </div>
                             </div>
                         </div>
+                           <!--Sheet modal-->
+                           <div class="popup" id="3">  
+                                 <div class="toolbar">
+                                       <div class="toolbar-inner">
+                                         <div class="left"><a class="link  popup-close" href="#">Luk ned</a></div>
+                                       </div>
+                                     </div>                         
+                                   <div class="content-block" style="margin:10px;">
+   
+                                       <h2>Information vedrørende annonce</h2>
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p>
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p>
+                                    
+                                     <img src="img/maps.JPG" class="maps">
+                                     <a href="#" class="link external button">Kontakt sælger</a>
+                                    </div>
+                                
+                               </div>
+
                         <div class="col-50">
                         <div class="card demo-card-header-pic">
                            <div style="background-image:url(img/fjernstyret.jpg)" class="card-header align-items-flex-end"></div>
@@ -177,9 +236,28 @@
                              <p class="date">Lagt op December 18, 2015</p>
                              <p>fjernstyret racerbil, står som ny</p>
                            </div>
-                           <div class="card-footer"><a href="#" class="link">200 kr.</a></div>
+                           <div class="card-footer"><a href="#" class="link">200 kr.</a>
+                              <p><a class="link popup-open" href="#" data-popup="#4">info</a></p>
+                           </div>
                          </div>
                          </div>
+                            <!--Sheet modal-->
+                            <div class="popup" id="4">  
+                                 <div class="toolbar">
+                                       <div class="toolbar-inner">
+                                         <div class="left"><a class="link  popup-close" href="#">Luk ned</a></div>
+                                       </div>
+                                     </div>                         
+                                   <div class="content-block" style="margin:10px;">
+                                       <h2>Information vedrørende annonce</h2>
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p>
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p>
+                                    
+                                     <img src="img/maps.JPG" class="maps">
+                                     <a href="#" class="link external button">Kontakt sælger</a>
+                                    </div>
+                                
+                               </div>
                      </div>
                      <div class="row">
                         <div class="col-50">
@@ -189,9 +267,29 @@
                                 <p class="date">Lagt op December 18, 2018</p>
                                 <p>Alle marvel figure sælges for 75 stk.</p>
                               </div>
-                              <div class="card-footer"><a href="#" class="link">75 kr.</a></div>
+                              <div class="card-footer"><a href="#" class="link">75 kr.</a>
+                                 <p><a class="link popup-open" href="#" data-popup="#5">info</a></p>
+                              </div>
                             </div>
                         </div>
+                           <!--Sheet modal-->
+                           <div class="popup" id="5">  
+                                 <div class="toolbar">
+                                       <div class="toolbar-inner">
+                                         <div class="left"><a class="link  popup-close" href="#">Luk ned</a></div>
+                                       </div>
+                                     </div>                         
+                                   <div class="content-block" style="margin:10px;">
+                                       <h2>Information vedrørende annonce</h2>
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p>
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p>
+                                    
+                                     <img src="img/maps.JPG" class="maps">
+                                     <a href="#" class="link external button">Kontakt sælger</a>
+                                    </div>
+                                
+                               </div>
+
                         <div class="col-50">
                         <div class="card demo-card-header-pic">
                            <div style="background-image:url(img/dolls.jpg)" class="card-header align-items-flex-end"></div>
@@ -199,9 +297,28 @@
                              <p class="date">Lagt op December 18, 2018</p>
                              <p>Fine dukker, lidt slitage</p>
                            </div>
-                           <div class="card-footer"><a href="#" class="link">100kr.</a></div>
+                           <div class="card-footer"><a href="#" class="link">100kr.</a>
+                              <p><a class="link popup-open" href="#" data-popup="#6">info</a></p>
+                           </div>
                          </div>
                          </div>
+                            <!--Sheet modal-->
+                            <div class="popup" id="6">  
+                                 <div class="toolbar">
+                                       <div class="toolbar-inner">
+                                         <div class="left"><a class="link  popup-close" href="#">Luk ned</a></div>
+                                       </div>
+                                     </div>                         
+                                   <div class="content-block" style="margin:10px;">
+                                       <h2>Information vedrørende annonce</h2>
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p>
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p>
+                                    
+                                     <img src="img/maps.JPG" class="maps">
+                                     <a href="#" class="link external button">Kontakt sælger</a>
+                                    </div>
+                                
+                               </div>
                      </div>
                   </div>
                </div>

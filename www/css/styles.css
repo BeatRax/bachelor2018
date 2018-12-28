@@ -211,6 +211,11 @@ text-justify: auto;
     padding: 0 16px;
 }
 
+.maps{
+    height: auto;
+    width: 100%;
+}
+
 /*about.html*/
 .addItemRow{
     margin-top: 20px;
