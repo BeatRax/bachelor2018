@@ -86,7 +86,22 @@ function capturePhoto() {
     alert('Failed because: ' + message);
   }
 }
+$$(document).on('page:init', '.page[data-name="progression-screen"]', function (e) {
+  console.log("!fired");
 
+
+
+
+
+
+
+
+
+
+
+
+  
+});
 $$(document).on('page:init', '.page[data-name="home"]', function (e) {
   firebase.auth().onAuthStateChanged(function (user) {
     user = firebase.auth().currentUser;
@@ -298,6 +313,7 @@ $$('body').on('click', '.popup-choice-game', function () {
   
   app.tab.show($$('#game-view'), false);
   app.popup.close($('.popup-choice'), true);
+
   // gameView.router.navigate({
   //   url: 'progression-screen',
   //   options: {
