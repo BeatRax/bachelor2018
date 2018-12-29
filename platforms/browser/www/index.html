@@ -56,6 +56,11 @@
             <i class="icon f7-icons ios-only icon-ios-fill">person_round_fill</i>
             <span class="tabbar-label">Profile</span>
           </a>
+          <a href="#game-view" class="tab-link">
+              <i class="icon f7-icons">rocket</i>
+              <i class="icon f7-icons ios-only icon-ios-fill">rocket_fill</i>
+              <span class="tabbar-label">Game</span>
+            </a>
         </div>
       </div>
       <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
@@ -160,6 +165,11 @@
       <div id="view-profile" class="view tab">
         <!-- Settings page will be loaded here dynamically from /settings/ route -->
       </div>
+
+      <!-- Settings View -->
+      <div id="game-view" class="view">
+          <!-- Settings page will be loaded here dynamically from /settings/ route -->
+        </div>
     </div>
 
     <!-- Login Screen -->
@@ -310,8 +320,11 @@
       <div class="block">
         <p>Vælg imellem spil eller salg</p>
         <!-- Close Popup -->
-        <p><a class="link" href="#">Spil</a></p>
-        <p><a class="link popup-choice-sale" href="#">Close popup</a></p>
+        <!-- <p><a href="./progression-screen/" class="link" >Spil</a></p> -->
+        <div>
+            <p><a data-reload-current="false"  class="col button button-fill popup-close popup-choice-game">Spil</a></p> 
+          </div>
+        <p><a class="link popup-choice-sale" href="#">Buy/sell</a></p>
         <p>Lorem ipsum dolor sit amet...</p>
       </div>
     </div>

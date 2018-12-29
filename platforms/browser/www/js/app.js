@@ -49,7 +49,6 @@ var app = new Framework7({
 });
 
 
-
 // Init/Create views
 var homeView = app.views.create('#view-home', {
   url: '/'
@@ -60,9 +59,8 @@ var catalogView = app.views.create('#view-catalog', {
 var profileView = app.views.create('#view-profile', {
   url: '/profile/'
 });
-
-$$('#view-home').on('show', function () {
-  myApp.alert('Tab 1 is visible');
+var gameView = app.views.create('#game-view', {
+  url: '/progression-screen/'
 });
 
 
@@ -283,7 +281,8 @@ $$('body').on('click', '.product-details-modal', function () {
 $$('body').on('click', '.sign-out-btn > p > a', function () {
   console.log("signed out!");
   firebase.auth().signOut();
-  profileView.router.back({ignoreCache:false, animate:false, reload:true});
+  app.tab.show($$('#view-home'), false);
+  // profileView.router.back({ignoreCache:false, animate:false, reload:true});
   
   // view.router.load({url:'index.html', ignoreCache:true, reload:true, force:true});
   // app.router.back();
@@ -295,3 +294,24 @@ app.tab.show($$('#view-home'), false);
 app.popup.close($('.popup-choice'), true);
 
 });
+$$('body').on('click', '.popup-choice-game', function () {
+  
+  app.tab.show($$('#game-view'), false);
+  app.popup.close($('.popup-choice'), true);
+  // gameView.router.navigate({
+  //   url: 'progression-screen',
+  //   options: {
+  //     reloadCurrent: true,
+  //     animate: false,
+  //     history: false,
+  //     clearPreviousHistory: true
+  //   }
+  // });
+  // app.popup.close($('.popup-choice'), true);
+  // app.router.load('/progression-screen/');
+  // this.$f7.mainView.router.load({url: "/progression-screen"});
+  // views.router.load('/progression-screen/');
+  // var f7View = this.$root.$children[0].$children[0].$children[0].f7View;
+  // console.log('>>> f7View:', f7View);
+  // f7View.loadPage('/progression-scree/');
+  });

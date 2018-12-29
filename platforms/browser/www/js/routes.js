@@ -28,6 +28,10 @@ routes = [
     path: '/active-deals/',
     url: './pages/active-deals.html',
   },
+  {
+    path: '/progression-screen/',
+    url: './pages/progression-screen.html',
+  },
 
   // Page Loaders & Router
   {
