@@ -1,0 +1,157 @@
+/* Your app styles here */
+.ios .tabbar-labels .tab-link:not(.tab-link-active) .icon-ios-fill {
+  display: none;
+}
+.ios .tabbar-labels .tab-link.tab-link-active .icon:not(.icon-ios-fill) {
+  display: none;
+}
+.fab-right-bottom {
+  position: fixed;
+}
+.page {
+  background-color: #fff !important;
+}
+
+/* Login */
+.login-button, .registrer-button {
+  margin: 10px 50px;
+}
+/* Forside */
+.searchbar-top{
+  margin: 0;
+  padding: 0;
+}
+.itemRow{
+  margin-bottom: 10px 
+}
+
+.showcaseitem{
+  height: 300px;
+  width: auto;
+  border: 1px solid #e9e9e9;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.demo-card-header-pic .card-header {
+  height: 40vw;
+  background-size: contain;
+  background-position: center;
+  color: #fff;
+  background-repeat: no-repeat;
+}
+.demo-card-header-pic .card-content-padding .date{
+  color: #8e8e93;
+}
+
+.md .card {
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 5px 6px 1px -1px rgba(0, 0, 0, 0.2), 0px 3px 3px 0px rgba(0, 0, 0, 0.14), 0px 1px 6px 0px rgba(0, 0, 0, 0.12);
+}
+
+
+.introcard{
+  height: 175px;
+}
+.Avatarcard{
+  height: 200px;
+  padding: 7.5px;
+}
+
+
+
+
+.product-image {
+  height: auto;
+  width: 100%;
+  padding: 10px 0;
+}
+.product-parent > div {
+  height: 300px;
+  box-shadow: 0px 0px 4px #999;
+  margin: 7.5px 0;
+  background-color: #f9f9f9;
+}
+.product-parent > div > .img {
+  width: 100%;
+  height: 50%;
+}
+.product-parent > div > div > img {
+  min-height: 100px;
+  min-width: 100px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+.product-parent > div > .details {
+  height: 50%;
+  padding: 0 7.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.product-parent > div > .details p {
+  margin: 0;
+}
+
+.product-details > .dynamic-content {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+}
+.product-details > .predefined-content {
+  display: flex;
+  height: 10%;
+  justify-items: center;
+}
+.product-details > .predefined-content > div {
+  margin: auto;
+}
+.product-details > .dynamic-content > .preloader {
+  margin: auto;
+  width: 50px;
+}
+.product-details > .dynamic-content > .product-details-modal {
+  width: 100%;
+  padding: 5%;
+}
+.product-details > .dynamic-content > .product-details-modal > .img > img {
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
+
+
+/* Profile page */
+.addItemRow{
+  margin-top: 20px;
+ 
+}
+
+.profile h4{
+  text-align: center
+}
+.profilbillede{
+  height: auto;
+  width: 100%;
+}
+
+.avatar-profilbillede {
+  height: auto;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.addItem img{
+ 
+  height: auto;
+  width: 100%;
+}
+
+

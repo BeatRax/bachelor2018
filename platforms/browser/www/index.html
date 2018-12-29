@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+          * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" /> -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>My App</title>
+
+  <link rel="stylesheet" href="css/f7/framework7.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+
+    <!-- Views/Tabs container -->
+    <div class="views tabs ios-edges">
+
+
+      <!-- Tabbar for switching views-tabs -->
+      <div class="toolbar tabbar-labels toolbar-bottom-md">
+        <div class="toolbar-inner">
+          <a href="#view-home" class="tab-link tab-link-active">
+            <i class="icon f7-icons ">home</i>
+            <i class="icon f7-icons ios-only icon-ios-fill">home_fill</i>
+            <span class="tabbar-label">Home</span>
+          </a>
+          <a href="#view-catalog" class="tab-link">
+            <i class="icon f7-icons">search</i>
+            <i class="icon f7-icons ios-only icon-ios-fill">search_fill</i>
+            <span class="tabbar-label">Search</span>
+          </a>
+
+          <a href="#view-profile" class="tab-link">
+            <i class="icon f7-icons">person_round</i>
+            <i class="icon f7-icons ios-only icon-ios-fill">person_round_fill</i>
+            <span class="tabbar-label">Profile</span>
+          </a>
+        </div>
+      </div>
+      <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+      <div id="view-home" class="view view-main tab tab-active">
+
+
+        <!-- Page, data-name contains page name which can be used in page callbacks -->
+        <div class="page" data-name="home">
+
+            <div class="fab fab-right-bottom">
+                <a href="#">
+                  <!-- First icon is visible when Speed Dial actions are closed -->
+                  <i class="icon f7-icons">add</i>
+                  <!-- Second icon is visible when Speed Dial actions are opened -->
+                  <i class="icon f7-icons">close</i>
+                </a>
+                <!-- Speed Dial action buttons -->
+                <div class="fab-buttons fab-buttons-top">
+                  <!-- <a href="/create-listing/">
+                        <i class="icon f7-icons ios-only">money_dollar</i>
+                      </a> -->
+                  <!--  -->
+                  <a href="/create-listing/" data-animate="false"><i class="icon f7-icons">money_dollar</i></a>
+                  <a href="#">QR</a>
+                </div>
+              </div>
+
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="content-block">
+              <div class="infinite-scroll-content">
+                
+
+
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+              <div class="list simple-list">
+                <div class="block ">
+                  <div class="row product-parent">
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="preloader infinite-scroll-preloader"></div>
+              <p style="text-align: center;">Infinite scroll kommer senere</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="fab fab-right-bottom">
+              <a href="#">
+                <!-- First icon is visible when Speed Dial actions are closed -->
+                <i class="icon f7-icons">add</i>
+                <!-- Second icon is visible when Speed Dial actions are opened -->
+                <i class="icon f7-icons">close</i>
+              </a>
+              <!-- Speed Dial action buttons -->
+              <div class="fab-buttons fab-buttons-top">
+                <!-- <a href="/create-listing/">
+                      <i class="icon f7-icons ios-only">money_dollar</i>
+                    </a> -->
+                <!--  -->
+                <a href="/create-listing/" data-animate="false"><i class="icon f7-icons">money_dollar</i></a>
+                <a href="#">QR</a>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+
+      <!-- Catalog View -->
+      <div id="view-catalog" class="view tab">
+        <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
+      </div>
+
+      <!-- Settings View -->
+      <div id="view-profile" class="view tab">
+        <!-- Settings page will be loaded here dynamically from /settings/ route -->
+      </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div class="login-screen" id="my-login-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <!-- <div class="login-screen-title">Login</div> -->
+
+            <div class="list">
+                <ul>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Email</div>
+                      <div class="item-input-wrap">
+                        <input type="text" name="email" placeholder="Your email">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Password</div>
+                      <div class="item-input-wrap">
+                        <input type="password" name="password" placeholder="Your password">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="block">
+                <div class="col">
+  
+                </div>
+                <div class="col">
+  
+                
+                <!-- <ul> -->
+                  <!-- <li> -->
+                    <a href="#" class="button button-raised button-fill login-button ">Sign In</a>
+                    <a href="#" class="button button-raised button-fill registrer-button">Registrer</a>
+                    <!-- <a href="#" class="item-link list-button close">Close</a> -->
+                  <!-- </li> -->
+                <!-- </ul> -->
+              </div>
+              </div>
+
+            <div class='intro-content'>
+                <h2 style="text-align: center;">Konceptet</h2>
+                <div class="row itemRow">
+                  <div class="col-50">
+                    <div class="card introcard">
+                      <div class="card-content card-content-padding"><i class="f7-icons size-20">money_dollar</i>
+                        <p>Sælg ud af dit barns gamle legetøj</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-50">
+                    <div class="card introcard">
+                      <div class="card-content card-content-padding"><i class="f7-icons size-20">heart</i></i>
+                        <p>Hver gang du sælger eller køber et brugt stykke legetøj, spares op til 10KG Co2</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row itemRow">
+                  <div class="col-50">
+                    <div class="card introcard">
+                      <div class="card-content card-content-padding"><i class="f7-icons size-20">rocket</i>
+                        <p>Dit barn bliver samtidigt belønnet i avatar-spillet</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-50">
+                    <div class="card introcard">
+                      <div class="card-content card-content-padding"><i class="f7-icons size-20">world</i>
+                        <p>Sammen hjælper vi hinanden med at passe på miljøet - mod en grønnere fremtid</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="content-block">
+                  <h2 style="text-align: center;">Din Avatar</h2>
+                  <div class="row itemRow">
+
+                    <div class="col-50">
+                      <img src="img/Superhero_08.png" class="avatar-profilbillede">
+                    </div>
+                    <div class="col-50">
+                      <div class="card Avatarcard">
+                        <h4>Din figur er dit ansvar</h4>
+                        <p><i class="fas fa-tshirt"></i>Giv din figur personlighed med nyt tøj</p>
+                        <p><i class="fas fa-utensils"></i>Sørg for den får mad, så den forbliver glad</p>
+                        <p><i class="fas fa-trophy"></i> Leg med din figur og udvikle den</p>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+
+                <h2 style="text-align: center;">Kom nemt igang</h2>
+                <div class="row icons">
+
+                  <div class="col-20"><i class="fas fa-user-plus" style="font-size: xx-large;"></i>
+                    <p>Opret dig</p>
+                  </div>
+                  <div class="col-10"><i class="fas fa-long-arrow-alt-right" style="font-size: xx-large;"></i></div>
+                  <div class="col-20"><i class="fas fa-hand-holding-usd" style="font-size: xx-large;"></i>
+                    <p>Sælg</p>
+                  </div>
+                  <div class="col-20"><i class="fas fa-shopping-cart" style="font-size: xx-large;"></i>
+                    <p>Køb</p>
+                  </div>
+                  <div class="col-10"><i class="fas fa-long-arrow-alt-right" style="font-size: xx-large;"></i></div>
+                  <div class="col-20"><i class="fas fa-thumbs-up" style="font-size: xx-large;"></i>
+                    <p>Igang!</p>
+                  </div>
+                </div>
+
+
+
+                <!-- <div class="block">
+                  <div class="row">
+                    <div class="col-25"></div>
+                    <div class="col-50">
+                      <a class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Opret
+                        dig nu!</a>
+                    </div>
+                    <div class="col-25"></div>
+                  </div>
+                </div> -->
+              </div>
+
+
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Detail Screen -->
+    <div class="popup popup-choice">
+      <div class="block">
+        <p>Vælg imellem spil eller salg</p>
+        <!-- Close Popup -->
+        <p><a class="link" href="#">Spil</a></p>
+        <p><a class="link popup-choice-sale" href="#">Close popup</a></p>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </div>
+    </div>
+
+
+
+  </div>
+  <!-- Cordova -->
+
+  <script src="cordova.js"></script>
+
+
+  <!-- Framework7 library -->
+  <script src="js/f7/framework7.min.js"></script>
+
+  <!-- App routes -->
+  <script src="js/routes.js"></script>
+
+  <!-- Your custom app scripts -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/firestore-scripts/firebase-app.js"></script>
+  <script type="text/javascript" src="js/firestore-scripts/firebase-auth.js"></script>
+  <script type="text/javascript" src="js/firestore-scripts/firebase.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
