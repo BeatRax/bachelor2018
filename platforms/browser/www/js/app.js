@@ -117,7 +117,7 @@ $$(document).on('page:init', '.page[data-name="home"]', function (e) {
           var product = "<div class='col-50 product-details-modal'><div class='img'><img data-id=" + doc.id + "></div><div class='details'><p>" + doc.data().title + "</p><p>" + doc.data().description + "</p><p><b>" + doc.data().price + ".-</b</p></div></div>";
 
           $$('.product-parent').append(product);
-          $$('[data-id=' + doc.id + ']').css('background-image', 'url(data:image/jpeg;base64,' + doc.data().image + ')')
+          $$('*[data-id="'+doc.id+'"]').css('background-image', 'url(data:image/jpeg;base64,' + doc.data().image + ')');
           // console.log(doc);
           // console.log(doc.data('title'));
         });
