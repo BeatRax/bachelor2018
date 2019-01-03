@@ -249,7 +249,7 @@ var ProductDetails = app.popup.create({
           docRef.get().then(function (doc) {
             if (doc.exists) {
 
-              var seller = "<div class='block'><p>Seller of this product is: " + doc.data().email + "</p></div>";
+              var seller = "<div class='block'><div class='row'><div class='col-50'><p style='text-align:center;'>Sælger af dette produkt tilhører: " + doc.data().email + "</p></div><div class='col-50'><img src='img/profile.png' style='height:100px;widht:100px;'></div></div><p><a class='col button button-fill'>Kontakt sælger</a></p><p><a class='col button button-fill'>Anmod om lokation</a></p> </div>";
 
               $$('.product-details > .dynamic-content').append(seller);
 
