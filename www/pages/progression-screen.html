@@ -1,0 +1,305 @@
+
+<div class="page" data-name="progression-screen">
+
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <!-- <a href="#" class="link back"> -->
+          <!-- <i class="icon icon-back"></i> -->
+          <!-- <span class="ios-only">Back</span> -->
+        <!-- </a> -->
+      </div>
+      <div class="title">game</div>
+    </div>
+  </div>
+  <div class="page-content">
+    
+      <script type="text/javascript">
+        // game = new Phaser.Game(window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio, Phaser.AUTO, '', {
+        //     preload: preload,
+        //     create: create,
+        //     update: update,
+        //     render: render
+        // });
+        var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, '', {
+            preload: game1,
+            create: create,
+            update: update,
+            render: render
+        });
+
+        function game1() {
+
+            // game.load.image('sky', 'assets/sky.png');
+            // game.load.image('sky2', 'assets/sky2.png');
+            // //game.load.image('sky', 'assets/background.png');
+            // game.load.image('groundsprite', 'assets/groundSprite.png');
+            // game.load.image('ground', 'assets/BackgroundSprite.png');
+            game.load.image('background', 'img/assets/Progression screen.png');
+            // game.load.image('star', 'assets/star.png');
+            // game.load.image('throphy', 'assets/throphy.png');
+            game.load.spritesheet('dude', 'img/assets/dude.png', 32, 48);
+            // game.load.spritesheet('dude', 'assets/dude.png', 60, 80);
+
+        }
+
+        var player;
+
+        function create() {
+            this.game.scale.pageAlignHorizontally = true;
+            this.game.scale.pageAlignVertically = true;
+            this.game.scale.refresh();
+
+            game.world.setBounds(0, 0, 1080, 1920);
+
+            //  We're going to be using physics, so enable the Arcade Physics system
+            // game.physics.startSystem(Phaser.Physics.ARCADE);
+
+            //  A simple background for our game
+            sky = game.add.sprite(0, 0, 'background');
+            /*             sky = game.add.sprite(0, 0, 'sky');
+                        sky = game.add.sprite(800, 0, 'sky'); */
+            sky.width = game.world.width;
+
+
+            // projectiles group 
+            // projectiles = game.add.group();
+
+            //  The platforms group contains the ground and the 2 ledges we can jump on
+            // platforms = game.add.group();
+
+            //  We will enable physics for any object that is created in this group
+            // platforms.enableBody = true;
+
+            // Projectiles
+            // var projectile = platforms.create(15, 5, 'ground');
+            // projectile.enableBody = true;
+            // projectile.scale.setTo(-4, -5);
+
+
+
+
+            // Here we create the ground.
+
+
+            // var ground = platforms.create(0, game.world.height - 48, 'groundsprite');
+
+            //  Scale it to fit the width of the game (the original sprite is 400x48 in size)
+            // ground.scale.setTo(1, 1);
+
+            //  This stops it from falling away when you jump on it
+            // ground.body.immovable = true;
+
+            // ground = platforms.create(400, game.world.height - 48, 'ground');
+            // ground.body.immovable = true;
+
+
+            // projectile.body.immovable = true;
+
+            //  Now let's create two ledges
+            // var ledge = platforms.create(400, 400, 'ground');
+            // var ledge = platforms.create(game.world.cennterX, game.world.centerY, 'ground');
+            // ledge.body.immovable = true;
+            // ledge = platforms.create(300, game.world.centerY * 1.6, 'ground');
+            // ledge.body.immovable = true;
+
+
+            // ledge = platforms.create(-150, 250, 'ground');
+            // ledge.body.immovable = true;
+
+            // The player and its settings
+            player = game.add.sprite(621, 1700, 'dude');
+            player.scale.setTo(2.4, 2.4);
+
+            //  We need to enable physics on the player
+            game.physics.arcade.enable(player);
+
+            //  Player physics properties. Give the little guy a slight bounce.
+            // player.body.bounce.y = 0;
+            // player.body.gravity.y = 0;
+            player.body.collideWorldBounds = true;
+
+            //  Our two animations, walking left and right.
+            player.animations.add('left', [0, 1, 2, 3], 8, true);
+            player.animations.add('right', [5, 6, 7, 8], 8, true);
+
+            //  Finally some stars to collect
+            // stars = game.add.group();
+
+            //  We will enable physics for any star that is created in this group
+            // stars.enableBody = true;
+
+            //  Here we'll create 12 of them evenly spaced apart
+            // for (var i = 0; i < 12; i++) {
+            //     //  Create a star inside of the 'stars' group
+            //     var star = stars.create(i * 70, 0, 'star');
+
+            //     //  Let gravity do its thing
+            //     star.body.gravity.y = 500;
+
+            //     //  This just gives each star a slightly random bounce value
+            //     star.body.bounce.y = 0.6 + Math.random() * 0.2;
+            // }
+
+            //  The score
+            // scoreText = game.add.text(15, 125, 'score: 0', {
+            //     fontSize: '32px',
+            //     fill: '#000'
+            // });
+            // //  The score
+            // medaljeText = game.add.text(15, 175, 'Få 40.000 point, og vind en fårking fed pokallos!', {
+            //     fontSize: '32px',
+            //     fill: '#000'
+            // });
+
+
+
+            //  Our controls.
+            cursors = game.input.keyboard.createCursorKeys();
+            /*             game.camera.follow(player); */
+            //  Notice that the sprite doesn't have any momentum at all,
+
+
+            //  it's all just set by the camera follow type.
+            //  0.1 is the amount of linear interpolation to use.
+            //  The smaller the value, the smooth the camera (and the longer it takes to catch up)
+            game.camera.follow(player);
+        }
+
+        function update() {
+
+
+            // //  Collide the player and the stars with the platforms
+            // var hitPlatform = game.physics.arcade.collide(player, platforms);
+            // game.physics.arcade.collide(stars, platforms);
+            // game.physics.arcade.collide(throphy, platforms);
+
+            // //  Checks to see if the player overlaps with any of the stars, if he does call the collectStar function
+            // game.physics.arcade.overlap(player, stars, collectStar, null, this);
+            // game.physics.arcade.overlap(player, throphy, collectThrophy, null, this);
+
+            //  Reset the players velocity (movement)
+            // player.body.velocity.x = 0;
+
+            // game.physics.arcade.collide(player, walls);
+
+
+            if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
+                player.x -= 6;
+                player.animations.play('left');
+
+            } else if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
+                player.x += 6;
+                player.animations.play('right');
+            } else if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
+                player.y -= 6;
+                player.animations.play('left');
+            } else if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
+                game.kill;
+                player.y += 6;
+                player.animations.play('right');
+            } else if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN, Phaser.Keyboard.RIGHT)) {
+                player.y += 6;
+                player.x += 6;
+                player.animations.play('right');
+            } else {
+                //  Stand still
+                player.animations.stop();
+
+                player.frame = 4;
+            }
+
+            // if (level 1-2) {
+            //     game.physics.arcade.moveToXY(player, 339, 1514, 150, 1500);
+            //     player.animations.play('left');
+            //     game.time.events.add(1500, function() {
+            //         player.animations.stop();
+            //         player.frame = 0;
+            //         player.velocity.setTo(0, 0);
+
+            //     }, this);
+            // }
+
+
+            // //  Allow the player to jump if they are touching the ground.
+            // if (cursors.up.isDown && player.body.touching.down && hitPlatform) {
+            //     player.body.velocity.y = -750;
+            // }
+            // if (this.game.input.pointer1.isDown) {
+            //     if (this.game.origDragPoint) {
+            //         // move the camera by the amount the mouse has moved since last update		
+            //         this.game.camera.x += this.game.origDragPoint.x - this.game.input.activePointer.position.x;
+            //         this.game.camera.y += this.game.origDragPoint.y - this.game.input.activePointer.position.y;
+            //     }
+            //     // set new drag origin to current position	
+            //     this.game.origDragPoint = this.game.input.activePointer.position.clone();
+            // } else {
+            //     this.game.origDragPoint = null;
+            // }
+        }
+
+        // function spawnStar() {
+        //     var star = stars.create(Math.floor((Math.random() * 300) + 1), 0, 'star');
+        //     //  Let gravity do its thing
+        //     star.body.gravity.y = 500;
+        //     //  This just gives each star a slightly random bounce value
+        //     /* star.body.bounce.y = 0.1 + Math.random() * 0.1; */
+        //     star.body.bounce.y = 0.6 + Math.random() * 0.2;
+        // }
+
+        // function spawnThrophy() {
+        //     // Throphy
+        //     throphy = game.add.sprite(Math.floor((Math.random() * 900) + 1), 15, 'throphy');
+        //     throphy.scale.setTo(.5, .5);
+        //     game.physics.arcade.enable(throphy);
+        //     throphy.enableBody = true;
+        //     throphy.body.gravity.y = 300;
+        //     throphy.body.bounce.y = 6 * 0.15;
+
+        // }
+
+        // function collectThrophy() {
+        //     throphy.kill();
+        //     medaljeText.text = 'Tillykke, du har vundet spillet! Highfive! KAPOW!';
+
+        // }
+
+        // function collectStar(player, star) {
+        //     console.log(stars.total);
+        //     // Removes the star from the screen
+        //     star.kill();
+
+        //     //  Add and update the score
+        //     score += 10;
+        //     scoreText.text = 'Score: ' + score;
+
+
+        //     if (stars.total > 1500) {
+        //         spawnStar();
+        //     } else {
+        //         spawnStar();
+        //         spawnStar();
+        //         spawnStar();
+        //     }
+
+        //     if (score >= 40000) {
+        //         medaljeText.text = 'Wow, du er god! Her er en pokal!';
+        //         stars.callAll('kill');
+        //         spawnThrophy();
+        //     }
+
+
+
+        // }
+
+        function render() {
+
+            // game.debug.cameraInfo(game.camera, 32, 32);
+            // game.debug.spriteCoords(player, 32, 500);
+
+        }
+    </script>
+
+
+  </div>
+</div>
