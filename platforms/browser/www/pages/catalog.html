@@ -11,13 +11,39 @@
           <h1 style="text-align: center;">Søgefunktion her</h1>
      
       </div>
-      <div class="list simple-list">
-          <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-          </ul>
-        </div>
+      
+        <li style="list-style: none;">
+          <a class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Search car">
+            <select name="car" multiple>
+              <optgroup label="Japanese">
+                <option value="honda" selected>Honda</option>
+                <option value="lexus">Lexus</option>
+                <option value="mazda">Mazda</option>
+                <option value="nissan">Nissan</option>
+                <option value="toyota">Toyota</option>
+              </optgroup>
+              <optgroup label="German">
+                <option value="audi" selected>Audi</option>
+                <option value="bmw">BMW</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="vw">Volkswagen</option>
+                <option value="volvo">Volvo</option>
+              </optgroup>
+              <optgroup label="American">
+                <option value="cadillac">Cadillac</option>
+                <option value="chrysler">Chrysler</option>
+                <option value="dodge">Dodge</option>
+                <option value="ford" selected>Ford</option>
+              </optgroup>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Lejetøjsbiler</div>
+              </div>
+            </div>
+          </a>
+        </li>
+        
 
     </div>
   </div>
