@@ -12,7 +12,7 @@
       * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
           * Enable inline JS: add 'unsafe-inline' to default-src
   -->
-  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:"> -->
   <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" /> -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
@@ -25,7 +25,9 @@
 
   <link rel="stylesheet" href="css/f7/framework7.min.css">
   <link rel="stylesheet" href="css/icons.css">
+  <!-- <link rel="stylesheet" href="css/app.css"> -->
   <link rel="stylesheet" href="css/app.css">
+  
 </head>
 
 <body>
@@ -110,7 +112,6 @@
               <div class="list simple-list">
                 <div class="block ">
                   <div class="row product-parent">
-
                   </div>
                 </div>
               </div>
@@ -322,9 +323,12 @@
         <!-- Close Popup -->
         <!-- <p><a href="./progression-screen/" class="link" >Spil</a></p> -->
         <div>
-            <p><a data-reload-current="false"  class="col button button-fill popup-close popup-choice-game">Spil</a></p> 
+            <p><a data-reload-current="true"  class="col button button-fill popup-close popup-choice-game">Spil</a></p> 
+            <!-- <p><a class="link" href="/progression.html">game</a></p> -->
+            <!-- <a class="link external" href="http://../progression.html">Open Google</a> -->
           </div>
         <p><a class="link popup-choice-sale" href="#">Buy/sell</a></p>
+        
         <p>Lorem ipsum dolor sit amet...</p>
       </div>
     </div>
@@ -333,9 +337,8 @@
 
   </div>
   <!-- Cordova -->
-
   <script src="cordova.js"></script>
-
+  <script src="js/index.js"></script>
 
   <!-- Framework7 library -->
   <script src="js/f7/framework7.min.js"></script>
@@ -344,7 +347,10 @@
   <script src="js/routes.js"></script>
 
   <!-- Your custom app scripts -->
-  <script  type="text/javascript"src="js/phaser.min.js"></script>
+  
+  <script type="text/javascript" src="js/phaser.min.js"></script>
+  <script type="text/javascript" src="js/example1.js"></script>
+  <script type="text/javascript" src="js/example2.js"></script>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/firestore-scripts/firebase-app.js"></script>
   <script type="text/javascript" src="js/firestore-scripts/firebase-auth.js"></script>
