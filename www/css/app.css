@@ -10,6 +10,29 @@
 }
 
 
+/*Font for main text*/
+p{
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+/*font for heading*/
+@font-face {font-family: "orange-juice";
+  src: url("//db.onlinewebfonts.com/t/e96f186fe61b4059889e293b3f5a02ed.eot");
+  src: url("//db.onlinewebfonts.com/t/e96f186fe61b4059889e293b3f5a02ed.eot?#iefix") format("embedded-opentype"),
+  url("//db.onlinewebfonts.com/t/e96f186fe61b4059889e293b3f5a02ed.woff2") format("woff2"),
+  url("//db.onlinewebfonts.com/t/e96f186fe61b4059889e293b3f5a02ed.woff") format("woff"),
+  url("//db.onlinewebfonts.com/t/e96f186fe61b4059889e293b3f5a02ed.ttf") format("truetype"),
+  url("//db.onlinewebfonts.com/t/e96f186fe61b4059889e293b3f5a02ed.svg#orange juice") format("svg");
+}
+h1, h2{
+  font-family: orange-juice;
+}
+
+.title{
+  color: black;
+}
+
 .logo{
   margin: 25px 0px 25px 0px;
   padding: 25px;
@@ -59,6 +82,9 @@
   width: 150px;
 }
 
+.Catknap p{
+  margin: 0;
+}
 
 .md .fab-buttons a, .md .fab>a {
   
