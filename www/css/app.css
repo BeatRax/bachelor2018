@@ -13,7 +13,7 @@
 /*Font for main text*/
 p{
   font-family: 'Roboto', sans-serif;
-  
+  color: #333;
 }
 
 /*font for heading*/
@@ -33,19 +33,32 @@ h1, h2{
   color: black;
 }
 
+.md .list {
+  margin: 0;
+  font-size: 14px;
+}
 .logo{
-  margin: 25px 0px 25px 0px;
+  margin: 0px 0px 15px 0px;
   padding: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.row.icons {
+  padding: 0 15px;
 }
 
 .logo-choose{
-  margin: 25px 0px 25px 0px;
+  margin: 0px 0px 40px 0px;
   padding: 0px 25px 0px 25px;
+}
+.logo-choose > img {
+  max-width: 75vw;
 }
 
 .logo img{
   height: auto;
-  width: 100%;
+  max-width: 90vw;
 }
 
 .md .toolbar {
@@ -70,13 +83,13 @@ h1, h2{
 
 /*  */
 .md .button.button-active, .md .button.button-fill, .md .button.button-fill-md, .md .button.tab-link-active {
-  background-image: linear-gradient(to bottom right, #A8E6CE, #DCEDC2);
-  color: #fff;
- 
+  background-image: linear-gradient(to bottom right, #ADDCC9, #DBEBC2);
+  color: #333;
+  font-weight: bold;
 }
 
 .Catknap {
-  background-image: linear-gradient(to bottom right, #A8E6CE, #DCEDC2);
+  background-image: linear-gradient(to bottom right, #ADDCC9, #DBEBC2);
   color: #fff;
   margin: 10px;
   width: 150px;
@@ -88,7 +101,7 @@ h1, h2{
 
 .md .fab-buttons a, .md .fab>a {
   
-  background-image: linear-gradient(to bottom right, #A8E6CE, #DCEDC2);
+  background-image: linear-gradient(to bottom right, #ADDCC9, #DBEBC2);
   
 }
 
@@ -110,6 +123,9 @@ h1, h2{
 
 .itemRow{
   margin: 10px 
+}
+.itemRow > div:first-child {
+  align-self: center;
 }
 .icons img{
   height: auto;
@@ -134,22 +150,53 @@ h1, h2{
   color: #8e8e93;
 }
 
-.md .card {
+/* .md .card {
   margin: 10px 0px 10px 0px;
   padding: 10px;
   -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   box-shadow: 5px 6px 1px -1px rgba(0, 0, 0, 0.2), 0px 3px 3px 0px rgba(0, 0, 0, 0.14), 0px 1px 6px 0px rgba(0, 0, 0, 0.12);
+} */
+
+.intro-content > h1 {
+  margin-top: 30px;
 }
-
-
 .introcard{
   height: 175px;
+  display: flex;
+  background-image: linear-gradient(to bottom right, #ADDCC9, #DBEBC2);
+
+}
+.introcard > div {
+  height: 100%;
+  padding:0 7.5px !important;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-evenly;
+}
+.introcard > div > i {
+  font-size: 3em;
+}
+.introcard > div > i, .introcard > div > p {
+  text-align: center;
 }
 .Avatarcard{
   height: 200px;
-  padding: 7.5px;
-}
+  padding: 7.5px 15px;
+  background-image: linear-gradient(to bottom right, #ADDCC9, #DBEBC2);
 
+  display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.Avatarcard > h4 {
+  margin: 0;
+}
+.Avatarcard > p {
+  margin: 0;
+}
+.item-input > div > div > input {
+  border-bottom: 1px solid #e1e1e1;
+}
 
 
 
@@ -308,4 +355,18 @@ h1, h2{
   width: 100%;
   -webkit-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
+}
+
+.smart-select-page .subnavbar {
+  display: none;
+}
+.smart-select-popup .page-with-subnavbar .navbar~.page-content {
+  padding-top: 50px !important;
+}
+.popup-choice > div.block {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
