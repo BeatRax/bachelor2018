@@ -83,13 +83,13 @@ h1, h2{
 
 /*  */
 .md .button.button-active, .md .button.button-fill, .md .button.button-fill-md, .md .button.tab-link-active {
-  background-image: linear-gradient(to bottom right, #ADDCC9, #DBEBC2);
+  background-image: linear-gradient(to bottom right, #ADDCC9, #91c5b0);
   color: #333;
   font-weight: bold;
 }
 
 .Catknap {
-  background-image: linear-gradient(to bottom right, #ADDCC9, #DBEBC2);
+  background-image: linear-gradient(to bottom right, #ADDCC9, #91c5b0);
   color: #fff;
   margin: 10px;
   width: 150px;
@@ -101,7 +101,7 @@ h1, h2{
 
 .md .fab-buttons a, .md .fab>a {
   
-  background-image: linear-gradient(to bottom right, #ADDCC9, #DBEBC2);
+  background-image: linear-gradient(to bottom right, #ADDCC9, #91c5b0);
   
 }
 
@@ -163,7 +163,7 @@ h1, h2{
 .introcard{
   height: 175px;
   display: flex;
-  background-image: linear-gradient(to bottom right, #ADDCC9, #DBEBC2);
+  background-image: linear-gradient(to bottom right, #ADDCC9, #91c5b0);
 
 }
 .introcard > div {
@@ -182,7 +182,7 @@ h1, h2{
 .Avatarcard{
   height: 200px;
   padding: 7.5px 15px;
-  background-image: linear-gradient(to bottom right, #ADDCC9, #DBEBC2);
+  background-image: linear-gradient(to bottom right, #ADDCC9, #91c5b0);
 
   display: flex;
     flex-direction: column;
