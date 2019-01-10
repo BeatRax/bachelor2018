@@ -1,13 +1,50 @@
 <template>
   <div class="page" data-name="catalog">
+<<<<<<< HEAD
     <div class="navbar">
       <div class="navbar-inner sliding">
         <div class="title">Search</div>
+=======
+      <div class="fab fab-right-bottom">
+          <a href="#">
+            <!-- First icon is visible when Speed Dial actions are closed -->
+            <i class="icon f7-icons">add</i>
+            <!-- Second icon is visible when Speed Dial actions are opened -->
+            <i class="icon f7-icons">close</i>
+          </a>
+          <!-- Speed Dial action buttons -->
+          <div class="fab-buttons fab-buttons-top">
+            <!-- <a href="/create-listing/">
+                  <i class="icon f7-icons ios-only">money_dollar</i>
+                </a> -->
+            <!--  -->
+            <a href="/create-listing/" data-animate="false"><img src="img/sell.png" class="add"></a>
+            <a href="#"><img src="img/qr.png" class="add"></a>
+          </div>
+        </div>
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="title"><h2>Søg efter legetøj</h2></div>
+        <div class="subnavbar">
+          <!-- Searchbar with auto init -->
+          <form class="searchbar">
+            <div class="searchbar-inner">
+              <div class="searchbar-input-wrap">
+                <input type="search" placeholder="Søg">
+                <i class="searchbar-icon"></i>
+                <span class="input-clear-button"></span>
+              </div>
+              <span class="searchbar-disable-button">Fortryd</span>
+            </div>
+          </form>
+        </div>
+>>>>>>> TestingBranchThomas
       </div>
     </div>
     <div class="page-content">
 
         <div class="content-block" style="margin-bottom:0;">
+<<<<<<< HEAD
           <h1 style="text-align: center;">Søgefunktion her</h1>
      
       </div>
@@ -18,6 +55,162 @@
             <li>Item 3</li>
           </ul>
         </div>
+=======
+          <h1 style="text-align: center;">Søg efter kategori</h1>
+          
+     
+      </div>
+      
+        <li style="list-style: none;">
+          <a class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Søg">
+            <select name="Køretøjer" multiple>
+                <option value="honda">Elektroniske biler</option>
+                <option value="lexus">Fjernstyret racerbil</option>
+                <option value="mazda">Hotwheels</option>
+                <option value="nissan">Brio biler</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title button button-fill Catknap"><p>Køretøjer</p></div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li style="list-style: none;">
+          <a class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Søg spil">
+            <select name="spil" multiple>
+              <optgroup label="Brætspil">
+                <option value="honda">Familiespil</option>
+                <option value="lexus">Strategi</option>
+                <option value="mazda">Underholdning</option>
+              </optgroup>
+              <optgroup label="konsol spil">
+                <option value="audi">PS4</option>
+                <option value="bmw">Xbox One</option>
+                <option value="mercedes">Xbox 360</option>
+                <option value="vw">PS3</option>
+                <option value="volvo">Gameboy</option>
+              </optgroup>
+              <optgroup label="pc spil">
+                <option value="cadillac">Børnespil</option>
+                <option value="chrysler">Skydespil</option>
+                <option value="dodge">adventure</option>
+                <option value="ford">Action</option>
+              </optgroup>
+              <optgroup label="kort spil">
+                  <option value="cadillac">Pokemon</option>
+                  <option value="chrysler">Baseball</option>
+                  <option value="dodge">Andet</option>
+              </optgroup>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title button button-fill Catknap"><p>Spil</p></div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li style="list-style: none;">
+          <a class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Søg dukker og dukkehuse">
+            <select name="car" multiple>
+
+                <option value="honda">Dukkehuse</option>
+                <option value="lexus">Barbi og ken</option>
+                <option value="mazda">Diverse dukker</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title button button-fill Catknap"><p>Dukker</p></div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li style="list-style: none;">
+          <a class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Søg elektronisk drevet legetøj">
+            <select name="car" multiple>
+                <option value="honda">Fjernstyret biler</option>
+                <option value="lexus">Børne tablet</option>
+                <option value="mazda">Andet</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title button button-fill Catknap"><p>Elektronisk</p></div>
+              </div>
+            </div>
+          </a>
+        </li>        
+        <li style="list-style: none;">
+          <a class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Søg figurer">
+            <select name="car" multiple>
+                <option value="honda">Marvel</option>
+                <option value="lexus">Barbie</option>
+                <option value="mazda">Andet</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title button button-fill Catknap"><p>Samle figure</p></div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li style="list-style: none;">
+          <a class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Søg lærerigt legetøj">
+            <select name="car" multiple>
+                <option value="honda">Puslespil</option>
+                <option value="lexus">Bøger</option>
+                <option value="mazda">Andet</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title button button-fill Catknap"><p>Lær & leg</p></div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li style="list-style: none;">
+          <a class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Søg udendørs">
+            <select name="car" multiple>
+                <option value="honda">Vandpistoler</option>
+                <option value="lexus">Trampolin</option>
+                <option value="mazda">Andet</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title button button-fill Catknap"><p>Udendørs</p></div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li style="list-style: none;">
+          <a class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Søg Samleobjekter">
+            <select name="car" multiple>
+                <option value="honda">Figurer</option>
+                <option value="lexus">Pokemon</option>
+                <option value="mazda">Andet</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title button button-fill Catknap"><p>Samleobjekter</p></div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li style="list-style: none;">
+          <a class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Søg Lego">
+            <select name="car" multiple>
+                <option value="honda">Star Wars</option>
+                <option value="lexus">Lego Technic</option>
+                <option value="mazda">Lego city</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title button button-fill Catknap"><p>Lego</p></div>
+              </div>
+            </div>
+          </a>
+        </li>
+        
+>>>>>>> TestingBranchThomas
 
     </div>
   </div>

@@ -12,9 +12,8 @@
       * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
           * Enable inline JS: add 'unsafe-inline' to default-src
   -->
-  <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:"> -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
   <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" /> -->
-  <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"/> -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -26,9 +25,12 @@
 
   <link rel="stylesheet" href="css/f7/framework7.min.css">
   <link rel="stylesheet" href="css/icons.css">
-  <!-- <link rel="stylesheet" href="css/app.css"> -->
   <link rel="stylesheet" href="css/app.css">
+
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   
+
 </head>
 
 <body>
@@ -46,23 +48,23 @@
           <a href="#view-home" class="tab-link tab-link-active">
             <i class="icon f7-icons ">home</i>
             <i class="icon f7-icons ios-only icon-ios-fill">home_fill</i>
-            <span class="tabbar-label">Home</span>
+            <span class="tabbar-label">HJEM</span>
           </a>
           <a href="#view-catalog" class="tab-link">
             <i class="icon f7-icons">search</i>
             <i class="icon f7-icons ios-only icon-ios-fill">search_fill</i>
-            <span class="tabbar-label">Search</span>
+            <span class="tabbar-label">SØG</span>
           </a>
 
           <a href="#view-profile" class="tab-link">
             <i class="icon f7-icons">person_round</i>
             <i class="icon f7-icons ios-only icon-ios-fill">person_round_fill</i>
-            <span class="tabbar-label">Profile</span>
+            <span class="tabbar-label">PROFIL</span>
           </a>
           <a href="#game-view" class="tab-link">
               <i class="icon f7-icons">rocket</i>
               <i class="icon f7-icons ios-only icon-ios-fill">rocket_fill</i>
-              <span class="tabbar-label">Game</span>
+              <span class="tabbar-label">SPIL</span>
             </a>
         </div>
       </div>
@@ -86,33 +88,20 @@
                         <i class="icon f7-icons ios-only">money_dollar</i>
                       </a> -->
                   <!--  -->
-                  <a href="/create-listing/" data-animate="false"><i class="icon f7-icons">money_dollar</i></a>
-                  <a href="#">QR</a>
+                  <a href="/create-listing/" data-animate="false"><img src="img/sell.png" class="add"></a>
+                  <a href="#"><img src="img/qr.png" class="add"></a>
                 </div>
               </div>
 
           <!-- Scrollable page content-->
           <div class="page-content">
             <div class="content-block">
-              <div class="infinite-scroll-content">
-                
-
-
+              <div class="infinite-scroll-content">             
               </div>
-
-
-
-
-
-
-
-
-
-
-
               <div class="list simple-list">
                 <div class="block ">
                   <div class="row product-parent">
+
                   </div>
                 </div>
               </div>
@@ -120,17 +109,6 @@
               <div class="preloader infinite-scroll-preloader"></div>
               <p style="text-align: center;">Infinite scroll kommer senere</p>
             </div>
-
-
-
-
-
-
-
-
-
-
-
             <div class="fab fab-right-bottom">
               <a href="#">
                 <!-- First icon is visible when Speed Dial actions are closed -->
@@ -180,46 +158,12 @@
         <div class="page">
           <div class="page-content login-screen-content">
             <!-- <div class="login-screen-title">Login</div> -->
-
-            <div class="list">
-                <ul>
-                  <li class="item-content item-input">
-                    <div class="item-inner">
-                      <div class="item-title item-label">Email</div>
-                      <div class="item-input-wrap">
-                        <input type="text" name="email" placeholder="Your email">
-                      </div>
-                    </div>
-                  </li>
-                  <li class="item-content item-input">
-                    <div class="item-inner">
-                      <div class="item-title item-label">Password</div>
-                      <div class="item-input-wrap">
-                        <input type="password" name="password" placeholder="Your password">
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="block">
-                <div class="col">
-  
-                </div>
-                <div class="col">
-  
-                
-                <!-- <ul> -->
-                  <!-- <li> -->
-                    <a href="#" class="button button-raised button-fill login-button ">Sign In</a>
-                    <a href="#" class="button button-raised button-fill registrer-button">Registrer</a>
-                    <!-- <a href="#" class="item-link list-button close">Close</a> -->
-                  <!-- </li> -->
-                <!-- </ul> -->
-              </div>
-              </div>
+            <div class="row logo">
+                <img src="img/logo-hori.png" clas="logo">
+            </div>           
 
             <div class='intro-content'>
-                <h2 style="text-align: center;">Konceptet</h2>
+                <h1 style="text-align: center;">Konceptet</h1>
                 <div class="row itemRow">
                   <div class="col-50">
                     <div class="card introcard">
@@ -231,7 +175,7 @@
                   <div class="col-50">
                     <div class="card introcard">
                       <div class="card-content card-content-padding"><i class="f7-icons size-20">heart</i></i>
-                        <p>Hver gang du sælger eller køber et brugt stykke legetøj, spares op til 10KG Co2</p>
+                        <p>Hver gang du handler legetøj brugt, spares op til 10KG CO<sub>2</sub></p>
                       </div>
                     </div>
                   </div>
@@ -247,20 +191,20 @@
                   <div class="col-50">
                     <div class="card introcard">
                       <div class="card-content card-content-padding"><i class="f7-icons size-20">world</i>
-                        <p>Sammen hjælper vi hinanden med at passe på miljøet - mod en grønnere fremtid</p>
+                        <p>Sammen hjælper vi hinanden med at passe på miljøet</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="content-block">
-                  <h2 style="text-align: center;">Din Avatar</h2>
+                  <h1 style="text-align: center;">Din Avatar</h1>
                   <div class="row itemRow">
 
-                    <div class="col-50">
+                    <div class="col-40">
                       <img src="img/Superhero_08.png" class="avatar-profilbillede">
                     </div>
-                    <div class="col-50">
+                    <div class="col-60">
                       <div class="card Avatarcard">
                         <h4>Din figur er dit ansvar</h4>
                         <p><i class="fas fa-tshirt"></i>Giv din figur personlighed med nyt tøj</p>
@@ -272,46 +216,51 @@
                   </div>
 
                 </div>
-
-
-
-
-                <h2 style="text-align: center;">Kom nemt igang</h2>
-                <div class="row icons">
-
-                  <div class="col-20"><i class="fas fa-user-plus" style="font-size: xx-large;"></i>
-                    <p>Opret dig</p>
+                <h1 style="text-align: center;">Kom nemt igang</h1>
+                <div class="row icons">               
+                    <img src="img/komigang.jpg">
                   </div>
-                  <div class="col-10"><i class="fas fa-long-arrow-alt-right" style="font-size: xx-large;"></i></div>
-                  <div class="col-20"><i class="fas fa-hand-holding-usd" style="font-size: xx-large;"></i>
-                    <p>Sælg</p>
-                  </div>
-                  <div class="col-20"><i class="fas fa-shopping-cart" style="font-size: xx-large;"></i>
-                    <p>Køb</p>
-                  </div>
-                  <div class="col-10"><i class="fas fa-long-arrow-alt-right" style="font-size: xx-large;"></i></div>
-                  <div class="col-20"><i class="fas fa-thumbs-up" style="font-size: xx-large;"></i>
-                    <p>Igang!</p>
-                  </div>
-                </div>
+                      </div> 
 
-
-
-                <!-- <div class="block">
-                  <div class="row">
-                    <div class="col-25"></div>
-                    <div class="col-50">
-                      <a class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Opret
-                        dig nu!</a>
-                    </div>
-                    <div class="col-25"></div>
-                  </div>
-                </div> -->
+                      <div class="list">
+                        <h1 style="text-align: center;">Login eller registrer dig nu!</h1>
+                        <ul>
+                          <li class="item-content item-input">
+                            <div class="item-inner">
+                              <div class="item-title item-label">Email</div>
+                              <div class="item-input-wrap">
+                                <input type="text" name="email" placeholder="Your email">
+                              </div>
+                            </div>
+                          </li>
+                          <li class="item-content item-input">
+                            <div class="item-inner">
+                              <div class="item-title item-label">Password</div>
+                              <div class="item-input-wrap">
+                                <input type="password" name="password" placeholder="Your password">
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="block">
+                        <div class="col">
+          
+                        </div>
+                        <div class="col">
+          
+                        
+                        <!-- <ul> -->
+                          <!-- <li> -->
+                            <a href="#" class="button button-raised button-fill login-button ">Sign In</a>
+                            <a href="#" class="button button-raised button-fill registrer-button">Registrer</a>
+                            <!-- <a href="#" class="item-link list-button close">Close</a> -->
+                          <!-- </li> -->
+                        <!-- </ul> -->
+                      </div>
+                      </div>
+                 </div>      
               </div>
-
-
-
-            
           </div>
         </div>
       </div>
@@ -320,26 +269,35 @@
     <!-- Product Detail Screen -->
     <div class="popup popup-choice">
       <div class="block">
-        <p>Vælg imellem spil eller salg</p>
+       
         <!-- Close Popup -->
         <!-- <p><a href="./progression-screen/" class="link" >Spil</a></p> -->
-        <div>
-            <p><a data-reload-current="true"  class="col button button-fill popup-close popup-choice-game">Spil</a></p> 
-            <!-- <p><a class="link" href="/progression.html">game</a></p> -->
-            <!-- <a class="link external" href="http://../progression.html">Open Google</a> -->
+        <div class="row">
+            <div class="col-20"></div>
+            <div class="col-60 profile">
+              <h2 style="margin: 0px 0px 10px 0px;">Spil videre på din Figur</h2>
+              <a data-reload-current="false"  class="link popup-choice-game"><img src="img/avatar.png" alt="profilbillede" class="profilbillede" style="width: 150%;"></a>
+            </div>
+            <div class="col-20"></div>
           </div>
-        <p><a class="link popup-choice-sale" href="#">Buy/sell</a></p>
-        
-        <p>Lorem ipsum dolor sit amet...</p>
+          <div class="row">
+              <div class="col-20"></div>
+              <div class="col-60 profile">
+                <h2>Eller køb & sælg legetøj</h2>
+                <a class="link popup-choice-sale" href="#"><img src="img/sell.png" alt="profilbillede" class="profilbillede" style="width: 50%;"></a>
+      
+             
+              </div>
+              <div class="col-20"></div>
+            </div>
+    
       </div>
     </div>
-
-
-
   </div>
   <!-- Cordova -->
+
   <script src="cordova.js"></script>
-  <script src="js/index.js"></script>
+
 
   <!-- Framework7 library -->
   <script src="js/f7/framework7.min.js"></script>
@@ -348,10 +306,7 @@
   <script src="js/routes.js"></script>
 
   <!-- Your custom app scripts -->
-  
-  <script type="text/javascript" src="js/phaser.min.js"></script>
-  <script type="text/javascript" src="js/example1.js"></script>
-  <script type="text/javascript" src="js/example2.js"></script>
+  <script  type="text/javascript"src="js/phaser.min.js"></script>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/firestore-scripts/firebase-app.js"></script>
   <script type="text/javascript" src="js/firestore-scripts/firebase-auth.js"></script>

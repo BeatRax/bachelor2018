@@ -74,8 +74,17 @@ function capturePhoto() {
   });
 
   function onSuccess(imageData) {
+<<<<<<< HEAD
     $$('.product-image').attr("src", "data:image/jpeg;base64," + imageData);
     $$('.product-image').attr("data-src", imageData);
+=======
+    // $$('.product-image').attr("src", "data:image/png;base64," + imageData);
+    var test = imageData;
+    $$('.product-image').attr("src", "data:image/jpeg;base64," + imageData);
+    $$('.product-image').attr("data-src", imageData);
+    // console.log("data:image/jpeg;base64," + imageData);
+    console.log("not working?");
+>>>>>>> TestingBranchThomas
   }
 
   function onFail(message) {
@@ -83,10 +92,27 @@ function capturePhoto() {
   }
 }
 $$(document).on('page:init', '.page[data-name="progression-screen"]', function (e) {
+<<<<<<< HEAD
   setTimeout(function() {
     console.log("trying to load game.js");
     $.getScript('../js/game.js');
   }, 3000);
+=======
+  console.log("!fired");
+
+
+
+
+
+
+
+
+
+
+
+
+  
+>>>>>>> TestingBranchThomas
 });
 $$(document).on('page:init', '.page[data-name="home"]', function (e) {
   firebase.auth().onAuthStateChanged(function (user) {
@@ -133,6 +159,15 @@ $$(document).on('page:init', '.page[data-name="create-listing"]', function (e) {
     description = $$("textarea[name='description']").val();
     price = $$("input[name='price']").val();
 
+<<<<<<< HEAD
+=======
+
+    console.log("user " + user.uid);
+    console.log("title " + title);
+    console.log("desc " + description);
+    console.log("price " + price);
+    console.log($$('.product-image').attr('src'));
+>>>>>>> TestingBranchThomas
     db.collection("Items").doc().set({
       title: title,
       owner: user.uid,
@@ -229,7 +264,11 @@ var ProductDetails = app.popup.create({
           docRef.get().then(function (doc) {
             if (doc.exists) {
 
+<<<<<<< HEAD
               var seller = "<div class='block'><p>Seller of this product is: " + doc.data().email + "</p></div>";
+=======
+              var seller = "<div class='block'><div class='row'><div class='col-50'><p style='text-align:center;'>Sælger af dette produkt tilhører: " + doc.data().email + "</p></div><div class='col-50'><img src='img/profile.png' style='height:100px;widht:100px;'></div></div><p><a class='col button button-fill'>Kontakt sælger</a></p></div>";
+>>>>>>> TestingBranchThomas
 
               $$('.product-details > .dynamic-content').append(seller);
 
@@ -294,4 +333,23 @@ $$('body').on('click', '.popup-choice-game', function () {
   app.tab.show($$('#game-view'), false);
   app.popup.close($('.popup-choice'), true);
 
+<<<<<<< HEAD
+=======
+  // gameView.router.navigate({
+  //   url: 'progression-screen',
+  //   options: {
+  //     reloadCurrent: true,
+  //     animate: false,
+  //     history: false,
+  //     clearPreviousHistory: true
+  //   }
+  // });
+  // app.popup.close($('.popup-choice'), true);
+  // app.router.load('/progression-screen/');
+  // this.$f7.mainView.router.load({url: "/progression-screen"});
+  // views.router.load('/progression-screen/');
+  // var f7View = this.$root.$children[0].$children[0].$children[0].f7View;
+  // console.log('>>> f7View:', f7View);
+  // f7View.loadPage('/progression-scree/');
+>>>>>>> TestingBranchThomas
   });
