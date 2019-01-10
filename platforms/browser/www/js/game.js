@@ -1,6 +1,6 @@
 
 var config = {
-    type:Phaser.WEBGL, 
+    type:Phaser.CANVAS, 
     width:  window.innerWidth,
     height: window.innerHeight-94,
     parent: 'phaser-container',

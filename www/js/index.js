@@ -34,14 +34,6 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-<<<<<<< HEAD
-
-        // $$('#phaser-container').append("device readdyy");
-        // console.log("index.js loaded");
-        // $.getScript('../game.js');
-        // alert("device ready!");
-=======
->>>>>>> TestingBranchThomas
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

@@ -8,23 +8,6 @@
 .fab-right-bottom {
   position: fixed;
 }
-<<<<<<< HEAD
-.page {
-  background-color: #fff !important;
-}
-
-/* Login */
-.login-button, .registrer-button {
-  margin: 10px 50px;
-}
-/* Forside */
-.searchbar-top{
-  margin: 0;
-  padding: 0;
-}
-.itemRow{
-  margin-bottom: 10px 
-=======
 
 
 /*Font for main text*/
@@ -147,7 +130,6 @@ h1, h2{
 .icons img{
   height: auto;
   width: 100%;
->>>>>>> TestingBranchThomas
 }
 
 .showcaseitem{
@@ -168,28 +150,11 @@ h1, h2{
   color: #8e8e93;
 }
 
-<<<<<<< HEAD
-.md .card {
-=======
 /* .md .card {
->>>>>>> TestingBranchThomas
   margin: 10px 0px 10px 0px;
   padding: 10px;
   -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   box-shadow: 5px 6px 1px -1px rgba(0, 0, 0, 0.2), 0px 3px 3px 0px rgba(0, 0, 0, 0.14), 0px 1px 6px 0px rgba(0, 0, 0, 0.12);
-<<<<<<< HEAD
-}
-
-
-.introcard{
-  height: 175px;
-}
-.Avatarcard{
-  height: 200px;
-  padding: 7.5px;
-}
-
-=======
 } */
 
 .intro-content > h1 {
@@ -232,7 +197,6 @@ h1, h2{
 .item-input > div > div > input {
   border-bottom: 1px solid #e1e1e1;
 }
->>>>>>> TestingBranchThomas
 
 
 
@@ -289,12 +253,7 @@ h1, h2{
   width: 50px;
 }
 .product-details > .dynamic-content > .product-details-modal {
-<<<<<<< HEAD
-  width: 100%;
-  padding: 5%;
-=======
   margin: 10px;
->>>>>>> TestingBranchThomas
 }
 .product-details > .dynamic-content > .product-details-modal > .img > img {
   width: 100%;
@@ -332,9 +291,6 @@ h1, h2{
   width: 100%;
 }
 
-<<<<<<< HEAD
-
-=======
 /*search*/
 
 .item-content {
@@ -414,4 +370,3 @@ h1, h2{
     flex-direction: column;
     justify-content: space-evenly;
 }
->>>>>>> TestingBranchThomas

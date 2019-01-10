@@ -74,8 +74,12 @@ function capturePhoto() {
   });
 
   function onSuccess(imageData) {
+    // $$('.product-image').attr("src", "data:image/png;base64," + imageData);
+    var test = imageData;
     $$('.product-image').attr("src", "data:image/jpeg;base64," + imageData);
     $$('.product-image').attr("data-src", imageData);
+    // console.log("data:image/jpeg;base64," + imageData);
+    console.log("not working?");
   }
 
   function onFail(message) {
@@ -229,7 +233,7 @@ var ProductDetails = app.popup.create({
           docRef.get().then(function (doc) {
             if (doc.exists) {
 
-              var seller = "<div class='block'><p>Seller of this product is: " + doc.data().email + "</p></div>";
+              var seller = "<div class='block'><div class='row'><div class='col-50'><p style='text-align:center;'>Sælger af dette produkt tilhører: " + doc.data().email + "</p></div><div class='col-50'><img src='img/profile.png' style='height:100px;widht:100px;'></div></div><p><a class='col button button-fill'>Kontakt sælger</a></p></div>";
 
               $$('.product-details > .dynamic-content').append(seller);
 

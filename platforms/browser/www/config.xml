@@ -15,10 +15,6 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-<<<<<<< HEAD
-    <allow-navigation href="*" />
-=======
->>>>>>> TestingBranchThomas
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
