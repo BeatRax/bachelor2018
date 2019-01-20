@@ -8,14 +8,18 @@ class Example1 extends Phaser.Scene {
 
 
         this.load.image('backdrop', '../img/assets/Progression screen.png');
-        this.load.spritesheet('dude',
-            '../img/assets/dude.png',
-            { frameWidth: 32, frameHeight: 48 }
+        // this.load.spritesheet('dude',
+        //     '../img/assets/dude.png',
+        //     { frameWidth: 32, frameHeight: 48 }
+        // );
+        this.load.spritesheet('ourdude',
+            '../img/assets/boy.png',
+            { frameWidth: 30.6, frameHeight: 31.8 }
         );
-        this.load.spritesheet('dude-hat',
-            '../img/assets/dude-hat.png',
-            { frameWidth: 32, frameHeight: 48 }
-        );
+        // this.load.spritesheet('dude-hat',
+        //     '../img/assets/dude-hat.png',
+        //     { frameWidth: 32, frameHeight: 48 }
+        // );
     }
 
     create() {
@@ -82,7 +86,7 @@ class Example1 extends Phaser.Scene {
         //   this.player = this.add.sprite(levels[doc.data().level].x, levels[doc.data().level].y, 'dude');
         this.image = this.add.image(0, 0, 'backdrop').setOrigin(0);
         // this.image.setScale(600);
-        this.player = this.add.sprite(661, 1762, 'dude');
+        this.player = this.add.sprite(661, 1762, 'ourdude');
         // this.player = this.physics.add.image(0, 0, 'dude');
         // var thisPlayer = this.player = this.add.sprite(661, 1762, 'dude');
         // this.player = this.add.sprite(661, 1762, 'dude');
@@ -103,55 +107,75 @@ class Example1 extends Phaser.Scene {
         this.key_RIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
         this.key_LEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
 
+        // this.anims.create({
+        //     key: 'left',
+        //     frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
+        //     frameRate: 5,
+        //     repeat: -1
+        // });
+
+        // this.anims.create({
+        //     key: 'turn',
+        //     frames: [{ key: 'dude', frame: 4 }],
+        //     frameRate: 20
+        // });
+
+        // this.anims.create({
+        //     key: 'right',
+        //     frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+        //     frameRate: 5,
+        //     repeat: -1
+        // });
+
+
+
+
+        // this.anims.create({
+        //     key: 'left-hat',
+        //     frames: this.anims.generateFrameNumbers('dude-hat', { start: 0, end: 3 }),
+        //     frameRate: 5,
+        //     repeat: -1
+        // });
+
+        // this.anims.create({
+        //     key: 'turn-hat',
+        //     frames: [{ key: 'dude-hat', frame: 4 }],
+        //     frameRate: 20
+        // });
+
+        // this.anims.create({
+        //     key: 'right-hat',
+        //     frames: this.anims.generateFrameNumbers('dude-hat', { start: 5, end: 8 }),
+        //     frameRate: 5,
+        //     repeat: -1
+        // });
         this.anims.create({
-            key: 'left',
-            frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
+            key: 'runleft',
+            frames: this.anims.generateFrameNumbers(this.player.texture.key, { start: 3, end: 5 }),
             frameRate: 5,
             repeat: -1
         });
 
         this.anims.create({
-            key: 'turn',
-            frames: [{ key: 'dude', frame: 4 }],
-            frameRate: 20
+            key: 'stand',
+            frames: [{ key: this.player.texture.key, frame: 1 }],
+            frameRate: 20,
+            repeat: -1
+            
         });
 
         this.anims.create({
-            key: 'right',
-            frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+            key: 'runright',
+            frames: this.anims.generateFrameNumbers(this.player.texture.key, { start: 6, end: 8 }),
             frameRate: 5,
             repeat: -1
         });
-
-
-
-
-        this.anims.create({
-            key: 'left-hat',
-            frames: this.anims.generateFrameNumbers('dude-hat', { start: 0, end: 3 }),
-            frameRate: 5,
-            repeat: -1
-        });
-
-        this.anims.create({
-            key: 'turn-hat',
-            frames: [{ key: 'dude-hat', frame: 4 }],
-            frameRate: 20
-        });
-
-        this.anims.create({
-            key: 'right-hat',
-            frames: this.anims.generateFrameNumbers('dude-hat', { start: 5, end: 8 }),
-            frameRate: 5,
-            repeat: -1
-        });
-
 
 
         this.input.keyboard.on('keyup', function (event) {
 
             if (event.key == "1") {
-                this.player.anims.play('right');
+                this.player.anims.play('runright');
                 var tween = this.tweens.add({
                     targets: this.player,
                     x: 661,
@@ -162,12 +186,12 @@ class Example1 extends Phaser.Scene {
                     delay: 200,
                     onComplete: function (src, tgt) {
                         this.targets[0].anims.stop();
-                        this.targets[0].anims.play('turn');
+                        this.targets[0].anims.play('stand');
                     }
                 });
             }
             if (event.key == "2") {
-                this.player.anims.play('left');
+                this.player.anims.play('runleft');
                 var tween = this.tweens.add({
                     targets: this.player,
                     x: 375,
@@ -178,12 +202,12 @@ class Example1 extends Phaser.Scene {
                     delay: 200,
                     onComplete: function (src, tgt) {
                         this.targets[0].anims.stop();
-                        this.targets[0].anims.play('turn');
+                        this.targets[0].anims.play('stand');
                     }
                 });
             }
             if (event.key == "3") {
-                this.player.anims.play('right');
+                this.player.anims.play('runright');
                 var tween = this.tweens.add({
                     targets: this.player,
                     x: 839,
@@ -194,12 +218,12 @@ class Example1 extends Phaser.Scene {
                     delay: 200,
                     onComplete: function (src, tgt) {
                         this.targets[0].anims.stop();
-                        this.targets[0].anims.play('turn');
+                        this.targets[0].anims.play('stand');
                     }
                 });
             }
             if (event.key == "4") {
-                this.player.anims.play('left');
+                this.player.anims.play('runleft');
                 var tween = this.tweens.add({
                     targets: this.player,
                     x: 345,
@@ -210,12 +234,12 @@ class Example1 extends Phaser.Scene {
                     delay: 200,
                     onComplete: function (src, tgt) {
                         this.targets[0].anims.stop();
-                        this.targets[0].anims.play('turn');
+                        this.targets[0].anims.play('stand');
                     }
                 });
             }
             if (event.key == "5") {
-                this.player.anims.play('right');
+                this.player.anims.play('runright');
                 var tween = this.tweens.add({
                     targets: this.player,
                     x: 853,
@@ -226,12 +250,12 @@ class Example1 extends Phaser.Scene {
                     delay: 200,
                     onComplete: function (src, tgt) {
                         this.targets[0].anims.stop();
-                        this.targets[0].anims.play('turn');
+                        this.targets[0].anims.play('stand');
                     }
                 });
             }
             if (event.key == "6") {
-                this.player.anims.play('left');
+                this.player.anims.play('runleft');
                 var tween = this.tweens.add({
                     targets: this.player,
                     x: 675,
@@ -242,12 +266,12 @@ class Example1 extends Phaser.Scene {
                     delay: 200,
                     onComplete: function (src, tgt) {
                         this.targets[0].anims.stop();
-                        this.targets[0].anims.play('turn');
+                        this.targets[0].anims.play('stand');
                     }
                 });
             }
             if (event.key == "7") {
-                this.player.anims.play('left');
+                this.player.anims.play('runleft');
                 var tween = this.tweens.add({
                     targets: this.player,
                     x: 209,
@@ -258,12 +282,12 @@ class Example1 extends Phaser.Scene {
                     delay: 200,
                     onComplete: function (src, tgt) {
                         this.targets[0].anims.stop();
-                        this.targets[0].anims.play('turn');
+                        this.targets[0].anims.play('stand');
                     }
                 });
             }
             if (event.key == "8") {
-                this.player.anims.play('right');
+                this.player.anims.play('runright');
                 var tween = this.tweens.add({
                     targets: this.player,
                     x: 559,
@@ -274,7 +298,7 @@ class Example1 extends Phaser.Scene {
                     delay: 200,
                     onComplete: function (src, tgt) {
                         this.targets[0].anims.stop();
-                        this.targets[0].anims.play('turn');
+                        this.targets[0].anims.play('stand');
                     }
                 });
 
@@ -293,12 +317,17 @@ class Example1 extends Phaser.Scene {
         .on('pointerdown', function() {
             this.scene.start("Example2");
         }, this);
+        this.ChangeScreen2 = this.add.text(0,window.innerHeight-180, "le garden Screen").setScrollFactor(0).setFontSize(15).setColor('#ffffff');
+        this.ChangeScreen2.setInteractive()
+        .on('pointerdown', function() {
+            this.scene.start("Example3");
+        }, this);
     }
 
 
     levelUp(userLevel) {
         console.log(userLevel);
-        this.player.anims.play('left');
+        this.player.anims.play('runleft');
         var tween = this.tweens.add({
             targets: this.player,
             x: 375,
@@ -309,7 +338,7 @@ class Example1 extends Phaser.Scene {
             delay: 200,
             onComplete: function (src, tgt) {
                 this.targets[0].anims.stop();
-                this.targets[0].anims.play('turn');
+                this.targets[0].anims.play('stand');
                 console.log(this);
                 var items = "Du har låst op for tingen:\nGrøn kasket\nGå til avatarskærm for at prøve dem!";
 
